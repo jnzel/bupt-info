@@ -1,0 +1,19 @@
+# Maven build target directory
+target/
+
+# Playwright diagnostic/debugging screenshots and HTML dumps
+debug_error.png
+debug_error.html
+debug_login_result.png
+debug_page.html
+
+# IDE configuration files
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+
+# OS specific files
+Thumbs.db
+.DS_Store
