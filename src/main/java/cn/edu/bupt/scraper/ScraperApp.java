@@ -61,11 +61,16 @@ public class ScraperApp {
                         try {
                             System.out.println("Waiting for password login tab in iframe...");
                             passwordTab.waitFor(new Locator.WaitForOptions().setTimeout(5000));
-                            System.out.println("Clicking password login tab inside iframe...");
-                            passwordTab.click();
-                            page.waitForTimeout(1000); // Wait for transition animation
+                            
+                            // Wait for network to be idle to ensure JS handlers are registered
+                            page.waitForLoadState(com.microsoft.playwright.options.LoadState.NETWORKIDLE);
+                            page.waitForTimeout(1000);
+                            
+                            System.out.println("Clicking password login tab inside iframe via JS evaluation...");
+                            passwordTab.evaluate("el => el.click()"); // Forces programmatic trigger
+                            page.waitForTimeout(1500); // Wait for transition animation
                         } catch (Exception e) {
-                            System.out.println("Password login tab inside iframe not clicked (might be already active): " + e.getMessage());
+                            System.out.println("Password login tab inside iframe not clicked: " + e.getMessage());
                         }
                         
                         // Locate inputs and button inside the iframe
@@ -85,11 +90,13 @@ public class ScraperApp {
                         Locator passwordTab = page.locator("a[i18n='login.type.password']");
                         try {
                             passwordTab.waitFor(new Locator.WaitForOptions().setTimeout(3000));
-                            System.out.println("Clicking password login tab...");
-                            passwordTab.click();
-                            page.waitForTimeout(1000); // Wait for transition animation
+                            page.waitForLoadState(com.microsoft.playwright.options.LoadState.NETWORKIDLE);
+                            page.waitForTimeout(1000);
+                            System.out.println("Clicking password login tab via JS evaluation...");
+                            passwordTab.evaluate("el => el.click()");
+                            page.waitForTimeout(1500); // Wait for transition animation
                         } catch (Exception e) {
-                            System.out.println("Password login tab not clicked (might be already active): " + e.getMessage());
+                            System.out.println("Password login tab not clicked: " + e.getMessage());
                         }
                         
                         // Locate inputs and button
