@@ -53,3 +53,14 @@ jobs:
           git commit -m "Auto-update BUPT RSS feed"
           git push
         fi
+
+    - name: Upload Debug Dumps
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: debug-reports
+        path: |
+          debug_login_result.png
+          debug_page.html
+          debug_error.png
+          debug_error.html
