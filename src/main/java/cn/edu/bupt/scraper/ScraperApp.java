@@ -382,7 +382,7 @@ public class ScraperApp {
 
         StringBuilder xml = new StringBuilder();
         xml.append("<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n");
-        xml.append("<rss version=\"2.0\" xmlns:atom=\"http://www.w3.org/2005/Atom\">\n");
+        xml.append("<rss version=\"2.0\" xmlns:atom=\"http://www.w3.org/2005/Atom\" xmlns:content=\"http://purl.org/rss/1.0/modules/content/\">\n");
         xml.append("<channel>\n");
         xml.append("  <title>北邮移动门户订阅源</title>\n");
         xml.append("  <link>https://mymob.bupt.edu.cn</link>\n");
@@ -392,11 +392,18 @@ public class ScraperApp {
         xml.append("  <atom:link href=\"https://raw.githubusercontent.com/BUPT-RSS/bupt-info/main/rss.xml\" rel=\"self\" type=\"application/rss+xml\" />\n");
 
         for (RssItem item : items) {
+            // Generate a plain-text summary for <description> (strip HTML tags, limit length)
+            String textSummary = item.description.replaceAll("<[^>]+>", "").trim();
+            if (textSummary.length() > 300) {
+                textSummary = textSummary.substring(0, 300) + "...";
+            }
+
             xml.append("  <item>\n");
             xml.append("    <title><![CDATA[").append(item.title).append("]]></title>\n");
             xml.append("    <link>").append(item.url.replace("&", "&amp;")).append("</link>\n");
             xml.append("    <guid>").append(item.url.replace("&", "&amp;")).append("</guid>\n");
-            xml.append("    <description><![CDATA[").append(item.description).append("]]></description>\n");
+            xml.append("    <description><![CDATA[").append(textSummary).append("]]></description>\n");
+            xml.append("    <content:encoded><![CDATA[").append(item.description).append("]]></content:encoded>\n");
             xml.append("    <pubDate>").append(item.pubDate).append("</pubDate>\n");
             xml.append("  </item>\n");
         }
