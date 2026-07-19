@@ -2,8 +2,8 @@ name: BUPT RSS Scraper
 
 on:
   schedule:
-    # Run every 12 hours (at 00:00 and 12:00 UTC / 08:00 and 20:00 Beijing Time)
-    - cron: '0 0,12 * * *'
+    # Run every 8 hours (at 00:00, 08:00, 16:00 UTC / 08:00, 16:00, 24:00 Beijing Time)
+    - cron: '0 0,8,16 * * *'
   workflow_dispatch: # Allows manual trigger from the GitHub Actions UI
 
 permissions:
@@ -65,3 +65,4 @@ jobs:
           debug_error.png
           debug_error.html
           debug_tab_switch.png
+          debug_no_iframe.png
