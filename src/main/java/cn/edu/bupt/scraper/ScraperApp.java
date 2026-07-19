@@ -193,28 +193,64 @@ public class ScraperApp {
                         System.out.println("Fetching details (" + (i + 1) + "/" + Math.min(rssItems.size(), fetchLimit) + "): " + item.title);
                         page.navigate(item.url);
                         page.waitForLoadState();
-                        page.waitForTimeout(1000); // Give it a second to load dynamic DOM
+                        page.waitForTimeout(2000);
                         
-                        // Selectors for BUPT detail page content (typical university CMS templates)
-                        Locator contentLocator = page.locator(".v_news_content, #content, .content, .article, .show-content, [name='_newscontent_fromname'], .con-detail");
+                        System.out.println("  Detail page URL: " + page.url());
+                        
+                        // Check if we got redirected to a login page
+                        if (page.url().contains("authserver") || page.url().contains("login")) {
+                            System.out.println("  WARNING: Detail page redirected to login! Session may have expired.");
+                            item.description = "<p>文章内容需要登录后查看。</p><p><a href=\"" + item.url + "\">点击访问原文</a></p>";
+                            finalItems.add(item);
+                            continue;
+                        }
+                        
+                        // Try multiple selectors for BUPT detail page content
+                        String[] selectors = {
+                            ".v_news_content",
+                            "#content",
+                            ".content",
+                            ".article",
+                            ".show-content",
+                            "[name='_newscontent_fromname']",
+                            ".con-detail",
+                            ".wp_articlecontent",
+                            ".article-content",
+                            "#vsb_content",
+                            ".entry-content",
+                            ".news-content",
+                            ".detail-content",
+                            "article"
+                        };
+                        
                         String detailContent = "";
-                        
-                        if (contentLocator.count() > 0 && contentLocator.first().isVisible()) {
-                            detailContent = contentLocator.first().innerHTML().trim();
-                        } else {
-                            // Fallback: grab text from body
-                            String text = page.locator("body").innerText().trim();
-                            if (text.length() > 600) {
-                                text = text.substring(0, 600) + "...";
+                        for (String selector : selectors) {
+                            Locator loc = page.locator(selector);
+                            if (loc.count() > 0 && loc.first().isVisible()) {
+                                detailContent = loc.first().innerHTML().trim();
+                                System.out.println("  Matched selector: " + selector + " (content length: " + detailContent.length() + ")");
+                                break;
                             }
-                            detailContent = text.replace("\n", "<br>");
+                        }
+                        
+                        if (detailContent.isEmpty()) {
+                            // Fallback: grab the full page HTML so RSS readers can render it
+                            System.out.println("  WARNING: No content selector matched. Using full body innerHTML as fallback.");
+                            // Log first selector debug info
+                            System.out.println("  Page title: " + page.title());
+                            
+                            String bodyHtml = page.locator("body").innerHTML().trim();
+                            if (bodyHtml.length() > 10000) {
+                                bodyHtml = bodyHtml.substring(0, 10000) + "...";
+                            }
+                            detailContent = bodyHtml;
                         }
                         
                         item.description = detailContent;
                         finalItems.add(item);
                     } catch (Exception e) {
                         System.err.println("Failed to fetch content for " + item.url + ": " + e.getMessage());
-                        item.description = "无法获取详细内容，可能页面需要额外认证或结构已变动。";
+                        item.description = "<p>无法获取详细内容，可能页面需要额外认证或结构已变动。</p><p><a href=\"" + item.url + "\">点击访问原文</a></p>";
                         finalItems.add(item);
                     }
                 }
