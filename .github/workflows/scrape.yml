@@ -44,7 +44,7 @@ jobs:
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git add rss.xml
+        git add rss.xml articles/
         
         # Check if rss.xml has changes before committing to avoid unnecessary commits
         if git diff-index --quiet HEAD; then

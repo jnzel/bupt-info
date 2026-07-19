@@ -262,7 +262,28 @@ public class ScraperApp {
                     finalItems.add(item);
                 }
 
-                // 4. Generate RSS 2.0 XML using the fully populated items
+                // 4. Save each article as a standalone HTML file for GitHub Pages access
+                String pagesBaseUrl = "https://jnzel.github.io/bupt-info/articles/";
+                java.io.File articlesDir = new java.io.File("articles");
+                if (!articlesDir.exists()) {
+                    articlesDir.mkdirs();
+                }
+
+                for (RssItem item : finalItems) {
+                    String articleId = extractArticleId(item.url);
+                    String articleFilename = articleId + ".html";
+                    String articleHtml = generateArticleHtml(item.title, item.description, item.pubDate);
+                    
+                    try (FileWriter fw = new FileWriter(new java.io.File(articlesDir, articleFilename))) {
+                        fw.write(articleHtml);
+                    }
+                    
+                    // Update the item URL to point to the GitHub Pages article
+                    item.pagesUrl = pagesBaseUrl + articleFilename;
+                    System.out.println("Saved article: " + articleFilename);
+                }
+
+                // 5. Generate RSS 2.0 XML using the fully populated items
                 generateRssXml(finalItems);
 
                 System.out.println("Scraper finished successfully!");
@@ -290,7 +311,6 @@ public class ScraperApp {
 
     /**
      * Perform login on the CAS page when the form is inside an iframe.
-     * Locates elements via FrameLocator, but uses the parent Page for load state waits.
      */
     private static void performLogin(FrameLocator iframe, Page page, String username, String password) {
         Locator passwordTab = iframe.locator("a[i18n='login.type.password']");
@@ -315,30 +335,20 @@ public class ScraperApp {
         fillAndSubmit(usernameInput, passwordInput, submitButton, username, password);
     }
 
-    /**
-     * Switch from the default QR-code login tab to the password login tab.
-     * Uses Playwright's native click() which automatically waits for the element to be
-     * actionable (visible, stable, receiving events) — this is the critical fix for headless mode
-     * where evaluate()-based synthetic events fail.
-     */
     private static void switchToPasswordTab(Locator passwordTab, Locator usernameInput, Page page) {
         try {
             System.out.println("Waiting for password login tab to appear...");
             passwordTab.waitFor(new Locator.WaitForOptions().setTimeout(10000));
-
-            // Ensure page JS is fully loaded before clicking
             page.waitForLoadState(com.microsoft.playwright.options.LoadState.NETWORKIDLE);
 
             System.out.println("Clicking password login tab (Playwright native click)...");
             passwordTab.click();
 
-            // Wait for the username input to become visible — confirms the tab switch worked
             System.out.println("Waiting for username input to become visible...");
             usernameInput.waitFor(new Locator.WaitForOptions().setTimeout(5000));
             System.out.println("Success: Password login inputs are now visible!");
         } catch (Exception e) {
             System.err.println("Failed to switch to password login tab: " + e.getMessage());
-            // Save diagnostic screenshot
             try {
                 page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get("debug_tab_switch.png")));
                 System.out.println("Saved 'debug_tab_switch.png' for diagnosis.");
@@ -346,9 +356,6 @@ public class ScraperApp {
         }
     }
 
-    /**
-     * Fill in credentials and submit the login form.
-     */
     private static void fillAndSubmit(Locator usernameInput, Locator passwordInput, Locator submitButton,
                                       String username, String password) {
         usernameInput.fill(username);
@@ -357,13 +364,54 @@ public class ScraperApp {
         submitButton.click();
     }
 
+    /**
+     * Extract a unique article ID from the URL for use as filename.
+     */
+    private static String extractArticleId(String url) {
+        // Try to extract wbnewsid parameter
+        java.util.regex.Matcher m = java.util.regex.Pattern.compile("wbnewsid=(\\d+)").matcher(url);
+        if (m.find()) {
+            return m.group(1);
+        }
+        // Fallback: hash the URL
+        return String.valueOf(Math.abs(url.hashCode()));
+    }
+
+    /**
+     * Generate a standalone HTML page for one article, with clean styling.
+     */
+    private static String generateArticleHtml(String title, String content, String pubDate) {
+        StringBuilder html = new StringBuilder();
+        html.append("<!DOCTYPE html>\n<html lang=\"zh-CN\">\n<head>\n");
+        html.append("<meta charset=\"UTF-8\">\n");
+        html.append("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n");
+        html.append("<title>").append(escapeHtml(title)).append("</title>\n");
+        html.append("<style>\n");
+        html.append("body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; ");
+        html.append("max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.8; color: #333; background: #fafafa; }\n");
+        html.append("h1 { font-size: 1.5em; color: #1a1a1a; border-bottom: 2px solid #0066cc; padding-bottom: 10px; }\n");
+        html.append(".meta { color: #888; font-size: 0.9em; margin-bottom: 20px; }\n");
+        html.append(".content { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }\n");
+        html.append(".content img { max-width: 100%; height: auto; }\n");
+        html.append(".content table { border-collapse: collapse; width: 100%; }\n");
+        html.append(".content td, .content th { border: 1px solid #ddd; padding: 8px; }\n");
+        html.append("</style>\n</head>\n<body>\n");
+        html.append("<h1>").append(escapeHtml(title)).append("</h1>\n");
+        html.append("<div class=\"meta\">").append(escapeHtml(pubDate)).append("</div>\n");
+        html.append("<div class=\"content\">").append(content).append("</div>\n");
+        html.append("</body>\n</html>\n");
+        return html.toString();
+    }
+
+    private static String escapeHtml(String text) {
+        return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace("\"", "&quot;");
+    }
+
     private static boolean isOlderThanTwoDays(String text, String d1_ymd, String d1_md, String d2_ymd, String d2_md) {
-        // Match standard date formats like yyyy-MM-dd or MM-dd
         java.util.regex.Pattern p = java.util.regex.Pattern.compile("\\d{4}-\\d{2}-\\d{2}|\\d{2}-\\d{2}");
         java.util.regex.Matcher m = p.matcher(text);
         if (m.find()) {
             String foundDate = m.group();
-            // If the date found in text is neither today nor yesterday, it is older than 2 days
             return !foundDate.contains(d1_ymd) && !foundDate.contains(d1_md) &&
                    !foundDate.contains(d2_ymd) && !foundDate.contains(d2_md);
         }
@@ -385,22 +433,27 @@ public class ScraperApp {
         xml.append("<rss version=\"2.0\" xmlns:atom=\"http://www.w3.org/2005/Atom\" xmlns:content=\"http://purl.org/rss/1.0/modules/content/\">\n");
         xml.append("<channel>\n");
         xml.append("  <title>北邮移动门户订阅源</title>\n");
-        xml.append("  <link>https://mymob.bupt.edu.cn</link>\n");
+        xml.append("  <link>https://jnzel.github.io/bupt-info/</link>\n");
         xml.append("  <description>北京邮电大学移动端门户自动抓取订阅源</description>\n");
         xml.append("  <language>zh-cn</language>\n");
         xml.append("  <lastBuildDate>").append(getFormattedCurrentDate()).append("</lastBuildDate>\n");
-        xml.append("  <atom:link href=\"https://raw.githubusercontent.com/BUPT-RSS/bupt-info/main/rss.xml\" rel=\"self\" type=\"application/rss+xml\" />\n");
+        xml.append("  <atom:link href=\"https://raw.githubusercontent.com/jnzel/bupt-info/main/rss.xml\" rel=\"self\" type=\"application/rss+xml\" />\n");
 
         for (RssItem item : items) {
-            // Generate a plain-text summary for <description> (strip HTML tags, limit length)
-            String textSummary = item.description.replaceAll("<[^>]+>", "").trim();
+            // Generate a plain-text summary (strip <style> blocks first, then tags)
+            String textSummary = item.description.replaceAll("(?s)<style[^>]*>.*?</style>", "");
+            textSummary = textSummary.replaceAll("<[^>]+>", "").trim();
+            textSummary = textSummary.replaceAll("\\s+", " ");
             if (textSummary.length() > 300) {
                 textSummary = textSummary.substring(0, 300) + "...";
             }
 
+            // Use GitHub Pages URL as the link (no login required)
+            String linkUrl = (item.pagesUrl != null) ? item.pagesUrl : item.url;
+
             xml.append("  <item>\n");
             xml.append("    <title><![CDATA[").append(item.title).append("]]></title>\n");
-            xml.append("    <link>").append(item.url.replace("&", "&amp;")).append("</link>\n");
+            xml.append("    <link>").append(linkUrl.replace("&", "&amp;")).append("</link>\n");
             xml.append("    <guid>").append(item.url.replace("&", "&amp;")).append("</guid>\n");
             xml.append("    <description><![CDATA[").append(textSummary).append("]]></description>\n");
             xml.append("    <content:encoded><![CDATA[").append(item.description).append("]]></content:encoded>\n");
@@ -422,6 +475,7 @@ public class ScraperApp {
         String url;
         String description;
         String pubDate;
+        String pagesUrl; // GitHub Pages URL for the standalone article page
 
         RssItem(String title, String url, String description, String pubDate) {
             this.title = title;
