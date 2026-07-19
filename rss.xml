@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
 <channel>
-  <title>北邮移动门户订阅源</title>
+  <title>信息门户</title>
   <link>https://jnzel.github.io/bupt-info/</link>
-  <description>北京邮电大学移动端门户自动抓取订阅源</description>
+  <description>BUPT信息门户RSS</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sun, 19 Jul 2026 17:19:33 GMT+08:00</lastBuildDate>
+  <lastBuildDate>Sun, 19 Jul 2026 17:42:41 GMT+08:00</lastBuildDate>
   <atom:link href="https://raw.githubusercontent.com/jnzel/bupt-info/main/rss.xml" rel="self" type="application/rss+xml" />
   <item>
     <title><![CDATA[【竞赛通知】关于第四届（2026）中国研究生企业管理创新大赛报名的通知]]></title>
@@ -84,7 +84,7 @@
  <p class="MsoNormal" style="text-align: center; line-height: 125%; margin-top: 7.8pt; mso-para-margin-top: 0.5000gd; mso-vsb_temp-align: none;"><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">&nbsp;</span></p>
 </div>
 <!--EndFragment-->]]></content:encoded>
-    <pubDate>Sun, 19 Jul 2026 17:19:17 GMT+08:00</pubDate>
+    <pubDate>Sun, 19 Jul 2026 17:42:24 GMT+08:00</pubDate>
   </item>
   <item>
     <title><![CDATA[【竞赛通知】关于报名参加2026年第八届全球校园人工智能算法精英大赛的通知]]></title>
@@ -178,7 +178,7 @@
  <p class="MsoNormal" style="text-indent: 32pt;"><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">&nbsp;</span></p>
 </div>
 <!--EndFragment-->]]></content:encoded>
-    <pubDate>Sun, 19 Jul 2026 17:19:17 GMT+08:00</pubDate>
+    <pubDate>Sun, 19 Jul 2026 17:42:24 GMT+08:00</pubDate>
   </item>
   <item>
     <title><![CDATA[关于开展“多彩青春，成功就业”2026年暑期促就业专项行动的通知]]></title>
@@ -208,7 +208,7 @@
 <p style="text-align:right;text-indent:43px;line-height:150%"><span style="font-size:21px;line-height:150%;font-family:仿宋_gb2312;color:windowtext">就业与创业指导中心</span></p>
 <p style="margin-right:21px;text-align:right;text-indent:43px;line-height:150%"><span style="font-size:21px;line-height:150%;font-family:仿宋_gb2312;color:windowtext">2026</span><span style="font-size:21px;line-height:150%;font-family:仿宋_gb2312;color:windowtext">年7月17日</span></p>
 <p><br></p>]]></content:encoded>
-    <pubDate>Sun, 19 Jul 2026 17:19:17 GMT+08:00</pubDate>
+    <pubDate>Sun, 19 Jul 2026 17:42:24 GMT+08:00</pubDate>
   </item>
   <item>
     <title><![CDATA[关于公布北京邮电大学未来学院2026年“未来学者计划”项目立项结果的通知]]></title>
@@ -224,7 +224,7 @@
 <p style="text-align: right; text-indent: 43px; background: white;"><span style="font-size: 21px;font-family:仿宋_gb2312;color:#333333;background:white">未来学院</span></p>
 <p style="text-align: right; text-indent: 43px; background: white;"><span style="font-size: 21px;font-family:仿宋_gb2312;color:#333333;background:white">2026年7月17日</span></p>
 <p><br></p>]]></content:encoded>
-    <pubDate>Sun, 19 Jul 2026 17:19:17 GMT+08:00</pubDate>
+    <pubDate>Sun, 19 Jul 2026 17:42:24 GMT+08:00</pubDate>
   </item>
   <item>
     <title><![CDATA[数字媒体与设计艺术学院关于2025级本科生秋季学期校内转专业的通知]]></title>
@@ -251,7 +251,7 @@
 <p style="margin-bottom:0;text-align:right;line-height:150%"><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">数字媒体与设计艺术学院</span></span></p>
 <p style="margin-bottom:0;text-align:right;line-height:150%"><span style="font-family:'times new roman';font-size:16px">2026<span style="font-family:仿宋">年</span></span><span style="font-family:'times new roman';font-size:16px">7</span><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">月</span></span><span style="font-family:'times new roman';font-size:16px">17</span><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">日</span></span></p>
 <p><br></p>]]></content:encoded>
-    <pubDate>Sun, 19 Jul 2026 17:19:17 GMT+08:00</pubDate>
+    <pubDate>Sun, 19 Jul 2026 17:42:24 GMT+08:00</pubDate>
   </item>
 </channel>
 </rss>
