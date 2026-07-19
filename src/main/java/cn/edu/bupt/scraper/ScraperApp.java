@@ -260,7 +260,7 @@ public class ScraperApp {
         Locator passwordTab = iframe.locator("a[i18n='login.type.password']");
         Locator usernameInput = iframe.locator("input#username, input[name='username']").first();
         Locator passwordInput = iframe.locator("input#password, input[name='password']").first();
-        Locator submitButton = iframe.locator("button[type='submit'], .auth_login_btn, #login-submit, button:has-text('登录')").first();
+        Locator submitButton = iframe.locator("text=账号登录").first();
 
         switchToPasswordTab(passwordTab, usernameInput, page);
         fillAndSubmit(usernameInput, passwordInput, submitButton, username, password);
@@ -273,7 +273,7 @@ public class ScraperApp {
         Locator passwordTab = page.locator("a[i18n='login.type.password']");
         Locator usernameInput = page.locator("input#username, input[name='username']").first();
         Locator passwordInput = page.locator("input#password, input[name='password']").first();
-        Locator submitButton = page.locator("button[type='submit'], .auth_login_btn, #login-submit, button:has-text('登录')").first();
+        Locator submitButton = page.locator("text=账号登录").first();
 
         switchToPasswordTab(passwordTab, usernameInput, page);
         fillAndSubmit(usernameInput, passwordInput, submitButton, username, password);
