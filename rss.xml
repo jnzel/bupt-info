@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>北邮移动门户订阅源</title>
+  <link>https://mymob.bupt.edu.cn</link>
+  <description>北京邮电大学移动端门户自动抓取订阅源</description>
+  <language>zh-cn</language>
+  <lastBuildDate>Sun, 19 Jul 2026 15:42:40 GMT+08:00</lastBuildDate>
+  <atom:link href="https://raw.githubusercontent.com/BUPT-RSS/bupt-info/main/rss.xml" rel="self" type="application/rss+xml" />
+</channel>
+</rss>
