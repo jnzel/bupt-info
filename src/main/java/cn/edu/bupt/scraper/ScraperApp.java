@@ -1,7 +1,6 @@
 package cn.edu.bupt.scraper;
 
 import com.microsoft.playwright.*;
-import com.microsoft.playwright.options.AriaRole;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -49,66 +48,15 @@ public class ScraperApp {
                 if (currentUrl.contains("authserver") || page.locator("input").count() > 0 || page.locator("#loginIframe").count() > 0) {
                     System.out.println("Authentication page detected. Proceeding to log in...");
                     
-                    // Determine if the login form is loaded inside an iframe (like BUPT unified authentication page)
                     boolean hasIframe = page.locator("#loginIframe").count() > 0;
                     
                     if (hasIframe) {
                         System.out.println("Login iframe (#loginIframe) detected. Switching context to iframe...");
                         FrameLocator iframe = page.frameLocator("#loginIframe");
-                        
-                        // Wait for the "密码登录" (Password Login) tab inside the iframe and click it
-                        Locator passwordTab = iframe.locator("a[i18n='login.type.password']");
-                        try {
-                            System.out.println("Waiting for password login tab in iframe...");
-                            passwordTab.waitFor(new Locator.WaitForOptions().setTimeout(5000));
-                            
-                            // Wait for network to be idle to ensure JS handlers are registered
-                            page.waitForLoadState(com.microsoft.playwright.options.LoadState.NETWORKIDLE);
-                            page.waitForTimeout(1000);
-                            
-                            System.out.println("Clicking password login tab inside iframe via JS evaluation...");
-                            passwordTab.evaluate("el => el.click()"); // Forces programmatic trigger
-                            page.waitForTimeout(1500); // Wait for transition animation
-                        } catch (Exception e) {
-                            System.out.println("Password login tab inside iframe not clicked: " + e.getMessage());
-                        }
-                        
-                        // Locate inputs and button inside the iframe
-                        Locator usernameInput = iframe.locator("input#username:visible, input[name='username']:visible, input[type='text']:visible").first();
-                        Locator passwordInput = iframe.locator("input#password:visible, input[name='password']:visible, input[type='password']:visible").first();
-                        Locator submitButton = iframe.locator("button[type='submit']:visible, input[type='submit']:visible, .auth_login_btn:visible, #login-submit:visible, button:has-text('登录'):visible, input:has-text('登录'):visible").first();
-                        
-                        // Fill credentials and submit
-                        usernameInput.fill(username);
-                        passwordInput.fill(password);
-                        System.out.println("Credentials filled inside iframe. Submitting form...");
-                        submitButton.click();
-                        
+                        performLogin(iframe, page, username, password);
                     } else {
-                        // Standard main page login (direct)
-                        // Wait for the "密码登录" (Password Login) tab and click it
-                        Locator passwordTab = page.locator("a[i18n='login.type.password']");
-                        try {
-                            passwordTab.waitFor(new Locator.WaitForOptions().setTimeout(3000));
-                            page.waitForLoadState(com.microsoft.playwright.options.LoadState.NETWORKIDLE);
-                            page.waitForTimeout(1000);
-                            System.out.println("Clicking password login tab via JS evaluation...");
-                            passwordTab.evaluate("el => el.click()");
-                            page.waitForTimeout(1500); // Wait for transition animation
-                        } catch (Exception e) {
-                            System.out.println("Password login tab not clicked: " + e.getMessage());
-                        }
-                        
-                        // Locate inputs and button
-                        Locator usernameInput = page.locator("input#username:visible, input[name='username']:visible, input[type='text']:visible").first();
-                        Locator passwordInput = page.locator("input#password:visible, input[name='password']:visible, input[type='password']:visible").first();
-                        Locator submitButton = page.locator("button[type='submit']:visible, input[type='submit']:visible, .auth_login_btn:visible, #login-submit:visible, button:has-text('登录'):visible, input:has-text('登录'):visible").first();
-                        
-                        // Fill credentials and submit
-                        usernameInput.fill(username);
-                        passwordInput.fill(password);
-                        System.out.println("Credentials filled. Submitting form...");
-                        submitButton.click();
+                        System.out.println("Direct login page detected (no iframe).");
+                        performLogin(page, username, password);
                     }
                     
                     // Wait for the page redirection and load
@@ -302,6 +250,75 @@ public class ScraperApp {
             e.printStackTrace();
             System.exit(1);
         }
+    }
+
+    /**
+     * Perform login on the CAS page when the form is inside an iframe.
+     * Locates elements via FrameLocator, but uses the parent Page for load state waits.
+     */
+    private static void performLogin(FrameLocator iframe, Page page, String username, String password) {
+        Locator passwordTab = iframe.locator("a[i18n='login.type.password']");
+        Locator usernameInput = iframe.locator("input#username, input[name='username']").first();
+        Locator passwordInput = iframe.locator("input#password, input[name='password']").first();
+        Locator submitButton = iframe.locator("button[type='submit'], .auth_login_btn, #login-submit, button:has-text('登录')").first();
+
+        switchToPasswordTab(passwordTab, usernameInput, page);
+        fillAndSubmit(usernameInput, passwordInput, submitButton, username, password);
+    }
+
+    /**
+     * Perform login on the CAS page when the form is directly on the page (no iframe).
+     */
+    private static void performLogin(Page page, String username, String password) {
+        Locator passwordTab = page.locator("a[i18n='login.type.password']");
+        Locator usernameInput = page.locator("input#username, input[name='username']").first();
+        Locator passwordInput = page.locator("input#password, input[name='password']").first();
+        Locator submitButton = page.locator("button[type='submit'], .auth_login_btn, #login-submit, button:has-text('登录')").first();
+
+        switchToPasswordTab(passwordTab, usernameInput, page);
+        fillAndSubmit(usernameInput, passwordInput, submitButton, username, password);
+    }
+
+    /**
+     * Switch from the default QR-code login tab to the password login tab.
+     * Uses Playwright's native click() which automatically waits for the element to be
+     * actionable (visible, stable, receiving events) — this is the critical fix for headless mode
+     * where evaluate()-based synthetic events fail.
+     */
+    private static void switchToPasswordTab(Locator passwordTab, Locator usernameInput, Page page) {
+        try {
+            System.out.println("Waiting for password login tab to appear...");
+            passwordTab.waitFor(new Locator.WaitForOptions().setTimeout(10000));
+
+            // Ensure page JS is fully loaded before clicking
+            page.waitForLoadState(com.microsoft.playwright.options.LoadState.NETWORKIDLE);
+
+            System.out.println("Clicking password login tab (Playwright native click)...");
+            passwordTab.click();
+
+            // Wait for the username input to become visible — confirms the tab switch worked
+            System.out.println("Waiting for username input to become visible...");
+            usernameInput.waitFor(new Locator.WaitForOptions().setTimeout(5000));
+            System.out.println("Success: Password login inputs are now visible!");
+        } catch (Exception e) {
+            System.err.println("Failed to switch to password login tab: " + e.getMessage());
+            // Save diagnostic screenshot
+            try {
+                page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get("debug_tab_switch.png")));
+                System.out.println("Saved 'debug_tab_switch.png' for diagnosis.");
+            } catch (Exception ignored) {}
+        }
+    }
+
+    /**
+     * Fill in credentials and submit the login form.
+     */
+    private static void fillAndSubmit(Locator usernameInput, Locator passwordInput, Locator submitButton,
+                                      String username, String password) {
+        usernameInput.fill(username);
+        passwordInput.fill(password);
+        System.out.println("Credentials filled. Submitting login form...");
+        submitButton.click();
     }
 
     private static boolean isOlderThanTwoDays(String text, String d1_ymd, String d1_md, String d2_ymd, String d2_md) {
