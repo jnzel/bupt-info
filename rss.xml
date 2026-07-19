@@ -5,7 +5,960 @@
   <link>https://mymob.bupt.edu.cn</link>
   <description>北京邮电大学移动端门户自动抓取订阅源</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sun, 19 Jul 2026 16:01:34 GMT+08:00</lastBuildDate>
+  <lastBuildDate>Sun, 19 Jul 2026 16:25:22 GMT+08:00</lastBuildDate>
   <atom:link href="https://raw.githubusercontent.com/BUPT-RSS/bupt-info/main/rss.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[【竞赛通知】关于第四届（2026）中国研究生企业管理创新大赛报名的通知]]></title>
+    <link>https://mymob.bupt.edu.cn/xntz_content.jsp?urltype=news.NewsContentUrl&amp;wbtreeid=2153&amp;wbnewsid=138768</link>
+    <guid>https://mymob.bupt.edu.cn/xntz_content.jsp?urltype=news.NewsContentUrl&amp;wbtreeid=2153&amp;wbnewsid=138768</guid>
+    <description><![CDATA[<script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script>
+<div style="padding: 0 25px;">
+    <h1 align="center" style=";font-size: 16px;line-height: 40px;">【竞赛通知】关于第四届（2026）中国研究生企业管理创新大赛报名的通知</h1>
+    <div align="center" style="font-size: 10px;width:100%;float:left;padding-bottom: 15px;border-bottom: 1px solid #eee;">2026-07-17&nbsp;教务部&nbsp;点击：[<script>_showDynClicks("wbnews", 2101026164, 138768)</script><span id="dynclicks_wbnews_138768_4" name="dynclicks_wbnews_138768_4">47</span>] 
+</div>
+    <hr>
+    
+<script type="text/javascript" src="_m/js/jquery.qrcode.min.js"></script> <!--  20220119新增分享  生成微信二维码 -->
+
+  <style>
+    /*20220119新增分享*/
+   .qrid_zz {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      display: none;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      display: none;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .qrid_zz #qrid {
+      padding: 8px;
+      background: #fff;
+      border-radius: 5px;
+   }
+   /*分享*/
+</style>
+
+
+
+   <!-- 20220119新增分享 分享微信二维码 -->
+   
+
+       <!--20220119新增分享 分享js  s -->
+       <script>
+        console.log(document.location.href);//本页面地址，如localhost/html/index.html
+        function shareTo(stype) {
+            var ftit = '';
+            var flink = '';
+            var lk = '';
+            //获取文章标题
+            ftit = $('.detailtitle h3').text();//此处的class名应该根据自己本身页面的class来取
+            //获取网页中内容的第一张图片
+            flink = 'https://' + window.location.host + $('.detailcon p img').eq(0).attr('src');
+            if (typeof flink == 'undefined') {
+                flink = '';
+            }
+            //当内容中没有图片时，设置分享图片为网站logo
+            if (flink == '') {
+                /**
+                 * 此处根据自己页面的样式以及布局进行改变处理
+                 *
+                 */
+                lk = 'https://' + window.location.host + 'images/logo.png';
+            }
+            //如果是上传的图片则进行绝对路径拼接
+            if (flink.indexOf('/uploads/') != -1) {
+                lk = 'http://' + window.location.host + flink;
+            }
+            //百度编辑器自带图片获取
+            if (flink.indexOf('ueditor') != -1) {
+                lk = flink;
+            }
+            /**
+             * 进行QQ分享测试时，本地的页面会分享报错，需要用部署地址，可用'http://www.baidu.com'来代替document.location.href，进行测试查看效果
+             */
+            //qq空间接口的传参
+            if (stype == 'qzone') {
+                window.open('https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + document.location.href + '?sharesource=qzone&title=' + ftit + '&pics=' + lk + '&summary=' + document.querySelector('meta[name="description"]').getAttribute('content'));
+            }
+            //新浪微博接口的传参
+            if (stype == 'sina') {
+                window.open('http://service.weibo.com/share/share.php?url=' + document.location.href + '?sharesource=weibo&title=' + ftit + '&pic=' + lk + '&appkey=2706825840');
+            }
+            //qq好友接口的传参
+            if (stype == 'qq') {
+                //获取meta标签的值，然后分享
+                window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + document.location.href + '?sharesource=qzone&title=' + ftit + '&pics=' + lk + '&summary=' + document.querySelector('meta[name="description"]').getAttribute('content') + '&desc= 清华经管会计系');
+            }
+            //生成二维码给微信扫描分享
+            if (stype == 'wechat') {
+    
+                //http://zixuephp.net/inc/qrcode_img.php是生成微信二维码的网址，后面的url跟我们自己的网址，然后他会以二维码的形式输出
+                var qrstr = document.location.href;
+                if ($('#qrid')[0].innerHTML == "") {
+                    $('#qrid').qrcode(qrstr);
+                }
+                $('.qrid_zz')[0].style.display = "flex";
+    
+            }
+        }
+        $(function () {
+            var result = window.matchMedia('(max-width: 817px)');
+    
+            if (result.matches) {
+                var fx_kg = 0
+                $('.nry_con_out .ushare li.share').click(function () {
+                    if (fx_kg == 0) {
+                        $('.nry_big .subchannel')[0].style.bottom = '70px';
+                        fx_kg = 1;
+                    } else {
+                        $('.nry_big .subchannel')[0].style.bottom = '0px';
+                        fx_kg = 0;
+                    }
+    
+                })
+            } else {
+                $('.nry_con_out .ushare li.share').mouseenter(function () {
+                    $('.my-share-d')[0].style.display = "block";
+                })
+                $('.my-share-d').mouseleave(function () {
+                    $('.my-share-d')[0].style.display = "none";
+                })
+            }
+    
+    
+        })
+    
+        $('.qrid_zz').click(function () {
+            $('.qrid_zz')[0].style.display = "none";
+        })
+    </script>
+    <div id="vsb_content" class="sjnr"><div class="v_news_content">
+<style>@font-face{ font-family:"Times New Roman";} @font-face{ font-family:"宋体";} @font-face{ font-family:"Calibri";} @font-face{ font-family:"Wingdings";} @font-face{ font-family:"方正小标宋简体";} @font-face{ font-family:"仿宋";} @font-face{ font-family:"黑体";} @font-face{ font-family:"楷体_GB2312";} @list l0:level1{ mso-level-number-format:japanese-counting; mso-level-suffix:tab; mso-level-text:"%1、"; mso-level-tab-stop:none; mso-level-number-position:left; margin-left:22.5000pt;text-indent:-22.5000pt;font-family:'Times New Roman';} @list l0:level2{ mso-level-number-format:alpha-lower; mso-level-suffix:tab; mso-level-text:"%2)"; mso-level-tab-stop:none; mso-level-number-position:left; margin-left:42.0000pt;text-indent:-21.0000pt;font-family:'Times New Roman';} @list l0:level3{ mso-level-number-format:lower-roman; mso-level-suffix:tab; mso-level-text:"%3."; mso-level-tab-stop:none; mso-level-number-position:right; margin-left:63.0000pt;text-indent:-21.0000pt;font-family:'Times New Roman';} @list l0:level4{ mso-level-number-format:decimal; mso-level-suffix:tab; mso-level-text:"%4."; mso-level-tab-stop:none; mso-level-number-position:left; margin-left:84.0000pt;text-indent:-21.0000pt;font-family:'Times New Roman';} @list l0:level5{ mso-level-number-format:alpha-lower; mso-level-suffix:tab; mso-level-text:"%5)"; mso-level-tab-stop:none; mso-level-number-position:left; margin-left:105.0000pt;text-indent:-21.0000pt;font-family:'Times New Roman';} @list l0:level6{ mso-level-number-format:lower-roman; mso-level-suffix:tab; mso-level-text:"%6."; mso-level-tab-stop:none; mso-level-number-position:right; margin-left:126.0000pt;text-indent:-21.0000pt;font-family:'Times New Roman';} @list l0:level7{ mso-level-number-format:decimal; mso-level-suffix:tab; mso-level-text:"%7."; mso-level-tab-stop:none; mso-level-number-position:left; margin-left:147.0000pt;text-indent:-21.0000pt;font-family:'Times New Roman';} @list l0:level8{ mso-level-number-format:alpha-lower; mso-level-suffix:tab; mso-level-text:"%8)"; mso-level-tab-stop:none; mso-level-number-position:left; margin-left:168.0000pt;text-indent:-21.0000pt;font-family:'Times New Roman';} @list l0:level9{ mso-level-number-format:lower-roman; mso-level-suffix:tab; mso-level-text:"%9."; mso-level-tab-stop:none; mso-level-number-position:right; margin-left:189.0000pt;text-indent:-21.0000pt;font-family:'Times New Roman';} @list l1:level1{ mso-level-number-format:chinese-counting-thousand; mso-level-suffix:tab; mso-level-text:"(%1)"; mso-level-tab-stop:none; mso-level-number-position:left; margin-left:68.0000pt;text-indent:-36.0000pt;font-family:'Times New Roman';} @list l1:level2{ mso-level-number-format:alpha-lower; mso-level-suffix:tab; mso-level-text:"%2)"; mso-level-tab-stop:none; mso-level-number-position:left; margin-left:76.0000pt;text-indent:-22.0000pt;font-family:'Times New Roman';} @list l1:level3{ mso-level-number-format:lower-roman; mso-level-suffix:tab; mso-level-text:"%3."; mso-level-tab-stop:none; mso-level-number-position:right; margin-left:98.0000pt;text-indent:-22.0000pt;font-family:'Times New Roman';} @list l1:level4{ mso-level-number-format:decimal; mso-level-suffix:tab; mso-level-text:"%4."; mso-level-tab-stop:none; mso-level-number-position:left; margin-left:120.0000pt;text-indent:-22.0000pt;font-family:'Times New Roman';} @list l1:level5{ mso-level-number-format:alpha-lower; mso-level-suffix:tab; mso-level-text:"%5)"; mso-level-tab-stop:none; mso-level-number-position:left; margin-left:142.0000pt;text-indent:-22.0000pt;font-family:'Times New Roman';} @list l1:level6{ mso-level-number-format:lower-roman; mso-level-suffix:tab; mso-level-text:"%6."; mso-level-tab-stop:none; mso-level-number-position:right; margin-left:164.0000pt;text-indent:-22.0000pt;font-family:'Times New Roman';} @list l1:level7{ mso-level-number-format:decimal; mso-level-suffix:tab; mso-level-text:"%7."; mso-level-tab-stop:none; mso-level-number-position:left; margin-left:186.0000pt;text-indent:-22.0000pt;font-family:'Times New Roman';} @list l1:level8{ mso-level-number-format:alpha-lower; mso-level-suffix:tab; mso-level-text:"%8)"; mso-level-tab-stop:none; mso-level-number-position:left; margin-left:208.0000pt;text-indent:-22.0000pt;font-family:'Times New Roman';} @list l1:level9{ mso-level-number-format:lower-roman; mso-level-suffix:tab; mso-level-text:"%9."; mso-level-tab-stop:none; mso-level-number-position:right; margin-left:230.0000pt;text-indent:-22.0000pt;font-family:'Times New Roman';} p.MsoNormal{ mso-style-name:正文; mso-style-parent:""; margin:0pt; margin-bottom:.0001pt; mso-pagination:none; text-align:justify; text-justify:inter-ideograph; font-family:Calibri; mso-fareast-font-family:宋体; mso-bidi-font-family:'Times New Roman'; font-size:10.5000pt; mso-font-kerning:1.0000pt;} span.10{ font-family:Calibri;} span.15{ font-family:Calibri; color:rgb(5,99,193); text-decoration:underline; text-underline:single;} span.16{ font-family:Calibri; font-size:10.5000pt;} span.17{ font-family:Calibri; color:rgb(96,94,92); background:rgb(225,223,221); mso-shading:rgb(225,223,221);} span.18{ font-family:Calibri; font-size:9.0000pt; mso-font-kerning:1.0000pt;} span.19{ font-family:Calibri; color:rgb(96,94,92); background:rgb(225,223,221); mso-shading:rgb(225,223,221);} span.20{ font-family:Calibri; font-size:9.0000pt; mso-font-kerning:1.0000pt;} span.21{ font-family:Calibri; font-size:9.0000pt; mso-font-kerning:1.0000pt;} p.p{ mso-style-name:"普通\(网站\)"; mso-style-noshow:yes; margin-top:5.0000pt; margin-bottom:5.0000pt; mso-margin-top-alt:auto; mso-margin-bottom-alt:auto; mso-pagination:widow-orphan; text-align:left; font-family:宋体; font-size:12.0000pt;} p.MsoCommentText{ mso-style-name:批注文字; mso-style-noshow:yes; margin:0pt; margin-bottom:.0001pt; mso-pagination:none; text-align:left; font-family:Calibri; mso-fareast-font-family:宋体; mso-bidi-font-family:'Times New Roman'; font-size:10.5000pt; mso-font-kerning:1.0000pt;} p.MsoAcetate{ mso-style-name:批注框文本; mso-style-noshow:yes; margin:0pt; margin-bottom:.0001pt; mso-pagination:none; text-align:justify; text-justify:inter-ideograph; font-family:Calibri; mso-fareast-font-family:宋体; mso-bidi-font-family:'Times New Roman'; font-size:9.0000pt; mso-font-kerning:1.0000pt;} p.MsoHeader{ mso-style-name:页眉; mso-style-noshow:yes; margin:0pt; margin-bottom:.0001pt; border-bottom:1.0000pt solid #000; mso-border-bottom-alt:0.7500pt solid #000; padding:0pt 0pt 1pt 0pt ; tab-stops:center blank 207.6500pt right blank 415.3000pt ; vsb_temp-mode:char; mso-pagination:none; text-align:center; font-family:Calibri; mso-fareast-font-family:宋体; mso-bidi-font-family:'Times New Roman'; font-size:9.0000pt; mso-font-kerning:1.0000pt;} p.MsoFooter{ mso-style-name:页脚; mso-style-noshow:yes; margin:0pt; margin-bottom:.0001pt; tab-stops:center blank 207.6500pt right blank 415.3000pt ; vsb_temp-mode:char; mso-pagination:none; text-align:left; font-family:Calibri; mso-fareast-font-family:宋体; mso-bidi-font-family:'Times New Roman'; font-size:9.0000pt; mso-font-kerning:1.0000pt;} p.27{ mso-style-name:"List Paragraph"; margin:0pt; margin-bottom:.0001pt; text-indent:21.0000pt; mso-char-indent-count:2.0000; mso-pagination:none; text-align:justify; text-justify:inter-ideograph; font-family:Calibri; mso-fareast-font-family:宋体; mso-bidi-font-family:'Times New Roman'; font-size:10.5000pt; mso-font-kerning:1.0000pt;} p.28{ mso-style-name:Revision; mso-style-noshow:yes; margin:0pt; margin-bottom:.0001pt; font-family:Calibri; mso-fareast-font-family:宋体; mso-bidi-font-family:'Times New Roman'; font-size:10.5000pt; mso-font-kerning:1.0000pt;} span.msoIns{ mso-style-type:export-only; mso-style-name:""; text-decoration:underline; text-underline:single; color:blue;} span.msoDel{ mso-style-type:export-only; mso-style-name:""; text-decoration:line-through; color:red;} table.MsoNormalTable{ mso-style-name:普通表格; mso-style-parent:""; mso-style-noshow:yes; mso-tstyle-rowband-size:0; mso-tstyle-colband-size:0; mso-padding-alt:0.0000pt 5.4000pt 0.0000pt 5.4000pt; mso-para-margin:0pt; mso-para-margin-bottom:.0001pt; mso-pagination:widow-orphan; font-family:'Times New Roman'; font-size:10.0000pt; mso-ansi-language:#0400; mso-fareast-language:#0400; mso-bidi-language:#0400;} table.MsoTableGrid{ mso-style-name:网格型; mso-tstyle-rowband-size:0; mso-tstyle-colband-size:0; mso-padding-alt:0.0000pt 5.4000pt 0.0000pt 5.4000pt; mso-border-top-alt:1px solid #000; mso-border-left-alt:1px solid #000; mso-border-bottom-alt:1px solid #000; mso-border-right-alt:1px solid #000; mso-border-insideh:1px solid #000; mso-border-insidev:1px solid #000; mso-para-margin:0pt; mso-para-margin-bottom:.0001pt; mso-pagination:widow-orphan; font-family:'Times New Roman'; font-size:10.0000pt; mso-ansi-language:#0400; mso-fareast-language:#0400; mso-bidi-language:#0400;} @page{mso-page-border-surround-header:no; mso-page-border-surround-footer:no;}@page Section0{ margin-top:72.0000pt; margin-bottom:63.8000pt; margin-left:90.0000pt; margin-right:90.0000pt; size:595.3000pt 841.9000pt; vsb_temp:15.6000pt; mso-header-margin:42.5500pt; mso-footer-margin:49.6000pt;} div.Section0{page:Section0;}</style>
+<!--StartFragment-->
+<div class="Section0" style="vsb_temp: 15.6000pt;">
+ <p class="p" style="background: rgb(255, 255, 255); text-align: center; line-height: 28pt; margin-top: 0pt; margin-bottom: 0pt; mso-line-height-rule: exactly;">&nbsp;</p>
+ <p class="27" style="line-height: 125%; text-indent: -22.5pt; margin-top: 7.8pt; margin-left: 22.5pt; mso-para-margin-top: 0.5000gd; mso-char-indent-count: 0.0000; mso-list: l0 level1 lfo1;"><span style="font-family: 黑体; font-size: 16pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="mso-list: Ignore;">一、&nbsp;</span></span><span style="font-family: 黑体; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 黑体;">赛事概况</span></span></p>
+ <p class="MsoNormal" style="line-height: 28pt; text-indent: 32pt; mso-line-height-rule: exactly; mso-char-indent-count: 2.0000;"><span style="font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">“中国研究生企业管理创新大赛”（以下简称“企创大赛”）是“中国研究生创新实践系列大赛”主题赛事之一，由教育部学位管理与研究生教育司指导，中国学位与研究生教育学会、全国工商管理专业学位研究生教育指导委员会联合主办。企创大赛服务于国家发展战略和研究生培养机制改革，以实践创新和融合创新为导向，提升研究生在数智时代的胜任力及管理实践创新能力，助力管理教育领域推进人才培养模式改革，赋能数智时代高层次应用型管理人才培养。</span></span></p>
+ <p class="MsoNormal" style="line-height: 28pt; text-indent: 32pt; mso-line-height-rule: exactly; mso-char-indent-count: 2.0000;"><span style="font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">第四届中国研究生企业管理创新大赛将于</span><span style="font-family: 仿宋;">2026年8月10日启动报名，本届大赛内容涵盖三个赛道、一个专项，分别为企业决策赛道、商业分析与实践赛道、工商管理案例赛道、数字技术应用专项。各赛项互相独立，组队、报名、评审、奖励工作均分开进行，互不影响。</span></span></p>
+ <p class="MsoNormal" style="line-height: 28pt; text-indent: 32pt; mso-line-height-rule: exactly; mso-char-indent-count: 2.0000;"><span style="font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">企业决策赛道、商业分析与实践赛道、数字技术应用专项面向在校研究生、已获研究生入学资格的本科生和本研贯通学生开放报名。工商管理案例赛道以</span><span style="font-family: 仿宋;">MBA（含EMBA）及工商管理相关学科在读研究生为主，MBA（含EMBA）及工商管理相关学科的毕业生也可参赛。</span></span></p>
+ <p class="MsoNormal" style="line-height: 28pt; text-indent: 32pt; mso-line-height-rule: exactly; mso-char-indent-count: 2.0000;"><span style="font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">参赛报名平台为中国研究生创新实践系列大赛官方网站</span><span style="font-family: 仿宋;">(https://cpipc.acge.org.cn)。参赛报名时间为2026年8月10日08:00-9月22日19:00，报名信息审核截止时间为2026年9月23日17:00。</span></span></p>
+ <p class="MsoNormal" style="line-height: 28pt; text-indent: 32pt; mso-line-height-rule: exactly; mso-char-indent-count: 2.0000;"><span style="font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">本届大赛总决赛由北京外国语大学承办，总决赛时间为</span><span style="font-family: 仿宋;">12月5-6日。</span></span></p>
+ <p class="MsoNormal" style="line-height: 28pt; text-indent: 32pt; mso-line-height-rule: exactly; mso-char-indent-count: 2.0000;"><span style="font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">赛事详情请见附件中各赛项对应的规程及报名指南。</span></span></p>
+ <p class="27" style="line-height: 125%; text-indent: -34.05pt; margin-left: 34.1pt; mso-char-indent-count: -2.1300; mso-list: l0 level1 lfo1;"><span style="font-family: 黑体; font-size: 16pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="mso-list: Ignore;">二、&nbsp;</span></span><span style="font-family: 黑体; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 黑体;">组织</span></span><span style="font-family: 黑体; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 黑体;">机构</span></span></p>
+ <p class="MsoNormal" style="line-height: 125%;"><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">指导单位：教育部学位管理与研究生教育司</span></span></p>
+ <p class="MsoNormal" style="line-height: 125%;"><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">主办单位：中国学位与研究生教育学会</span></span></p>
+ <p class="MsoNormal" style="line-height: 125%;"><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">联合主办</span></span><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">：全国工商管理专业学位研究生教育指导委员会</span></span></p>
+ <p class="MsoNormal" style="line-height: 125%;"><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">承办单位：全国工商管理专业学位研究生教育指导委员会秘书处</span> </span></p>
+ <p class="MsoNormal" style="line-height: 125%; text-indent: 80pt; mso-char-indent-count: 5.0000;"><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">中国学位与研究生教育学会工商管理专业学位工作委员会</span></span></p>
+ <p class="MsoNormal" style="line-height: 125%; text-indent: 80pt; mso-char-indent-count: 5.0000;"><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">中国管理现代化研究会决策模拟专业委</span></span><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">员</span></span><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">会</span></span></p>
+ <p class="MsoNormal" style="line-height: 125%; text-indent: 80pt; mso-char-indent-count: 5.0000;"><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">中山大学管理学院</span></span></p>
+ <p class="MsoNormal" style="line-height: 125%; text-indent: 80pt; mso-char-indent-count: 5.0000;"><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">北京外国语大学（总决赛承办单位）</span></span></p>
+ <p class="MsoNormal" style="line-height: 125%;"><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">技术支持：北京金益博文科技有限公司</span></span></p>
+ <p class="MsoNormal" style="line-height: 125%; text-indent: 32pt; mso-char-indent-count: 2.0000;"><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">&nbsp;</span><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">Credamo见数</span></span></p>
+ <p class="MsoNormal" style="line-height: 125%; text-indent: 32pt; mso-char-indent-count: 2.0000;"><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: 仿宋;">虹宇数智</span></span></p>
+ <p class="MsoNormal" style="line-height: 125%; text-indent: 32pt; mso-char-indent-count: 2.0000;"><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">中国研究生企业管理创新大赛设立竞赛组织委员会（以下简称</span><span style="font-family: 仿宋;">“组委会”），组委会下设大赛专家委员会、裁判和仲裁工作委员会、执委会、组委会秘书处，组委会秘书处设在全国工商管理专业学位研究生教育指导委员会秘书处，具体负责竞赛组织、管理和协调等工作</span></span><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">。</span></span></p>
+ <p class="27" style="line-height: 125%; text-indent: -34.05pt; margin-left: 34.1pt; mso-char-indent-count: -2.1300; mso-list: l0 level1 lfo1;"><span style="font-family: 黑体; font-size: 16pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="mso-list: Ignore;">三、&nbsp;</span></span><span style="font-family: 黑体; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 黑体;">其他事项</span></span></p>
+ <p class="MsoNormal" style="line-height: 125%; text-indent: 32pt; mso-char-indent-count: 2.0000;"><span style="line-height: 125%; font-family: 楷体_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: 黑体; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 楷体_GB2312;">（一）比赛费用</span></span></p>
+ <p class="MsoNormal" style="line-height: 125%; text-indent: 32pt; mso-char-indent-count: 2.0000;"><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">本届大赛不收取任何费用。大赛参赛过程中产生的交通和食宿等其他费用自理。</span></span></p>
+ <p class="MsoNormal" style="line-height: 125%; text-indent: 32pt; mso-char-indent-count: 2.0000;"><span style="line-height: 125%; font-family: 楷体_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: 黑体; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 楷体_GB2312;">（二）赛事信息发布</span></span></p>
+ <p class="MsoNormal" style="line-height: 125%; text-indent: 32pt; mso-char-indent-count: 2.0000;"><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">组委会将在官方微信公众号发布大赛具体安排、培训研讨活动时间及相关最新信息，请各研究生培养单位及参赛团队主动关注。</span></span></p>
+ <p class="MsoNormal" style="line-height: 125%; text-indent: 32pt; mso-char-indent-count: 2.0000;"><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">大赛官方微信公众号名称为中国研究生企业管理创新大赛</span><span style="font-family: 仿宋;">(微信号:cpemic)，二维码如下:</span></span></p>
+ <p class="MsoNormal" style="text-align: center; line-height: 125%; text-indent: 32pt; mso-char-indent-count: 2.0000;">&nbsp;</p>
+ <p style="text-align: center;"><img width="148" src="/__local/5/EE/19/8C318908E2C548B1FB85B0D416C_1508801D_31FC.png" vwidth="148" vheight="" vurl="/_vsl/5EE198C318908E2C548B1FB85B0D416C/1508801D/31FC" vsbhref="vurl" orisrc="/__local/5/EE/19/8C318908E2C548B1FB85B0D416C_1508801D_31FC.png" class="img_vsb_content"></p>
+ <p class="MsoNormal" style="text-align: center; line-height: 125%; text-indent: 32pt; mso-char-indent-count: 2.0000;"><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">&nbsp;</span></p>
+ <p class="27" style="line-height: 125%; text-indent: -34.05pt; margin-left: 34.1pt; mso-char-indent-count: -2.1300; mso-list: l0 level1 lfo1;"><span style="font-family: 黑体; font-size: 16pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="mso-list: Ignore;">四、&nbsp;</span></span><span style="font-family: 黑体; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 黑体;">校内赛赛程安排</span></span></p>
+ <p class="MsoNormal" style="line-height: 125%; text-indent: 32pt; mso-char-indent-count: 2.0000;"><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">本届大赛内容涵盖三个赛道、一个专项，分别为企业决策赛道、</span><span style="font-family: 仿宋;">商业分析与实践赛道、工商管理案例赛道、数字技术应用专项</span><span style="font-family: 仿宋;">。</span></span></p>
+ <p class="MsoNormal" style="line-height: 125%; text-indent: 32pt; mso-char-indent-count: 2.0000;"><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">校内报名时间均为</span><span style="font-family: 仿宋;">202</span></span><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">6</span><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">年</span><span style="font-family: 仿宋;">8月11日至202</span></span><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">6</span><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">年</span><span style="font-family: 仿宋;">9月1日24:00</span></span></p>
+ <p class="MsoNormal" style="line-height: 125%; text-indent: 32pt; mso-char-indent-count: 2.0000;"><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">其中</span><span style="font-family: 仿宋;">企业决策赛道</span><span style="font-family: 仿宋;">MBA组别与其他研究生组别均要求每所学校可推荐不超过6支队伍报名参赛，工商管理案例赛道每所院校限定最多3支团队参赛。报名企业决策赛道与工商管理案例赛道的团队请注意：</span></span></p>
+ <p class="MsoNormal" style="line-height: 125%; text-indent: 32pt; mso-char-indent-count: 2.0000;"><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">请在规定时间内填写通知附件</span><span style="font-family: 仿宋;">5中的《北京邮电大学研究生学科竞赛参赛信息表-第四届中国研究生企业管理创新大赛-X</span></span><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">X</span><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">赛道》电子版发送至</span></span><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">181646958@qq.com</span><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">（邮件标题请注明</span><span style="font-family: 仿宋;">“第四届中国研究生企业管理创新大赛XX赛道报名表”用于后续组织校内赛。校内赛具体事项根据报名情况再进行安排与通知。</span></span></p>
+ <p class="MsoNormal" style="line-height: 125%; text-indent: 32pt; mso-char-indent-count: 2.0000;"><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">商业分析与实践赛道与数字技术应用专项</span><span style="font-family: 仿宋;">组委会对院校参赛团队数量没有要求，不需要发校内报名邮件，可直接按照组委会公布的大赛日程完成各项事宜。</span></span></p>
+ <p class="MsoNormal" style="line-height: 125%; text-indent: 32pt; mso-char-indent-count: 2.0000;"><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">组委会各赛道具体赛程安排请见附件</span></span><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">1</span><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">、</span></span><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">2</span><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">、</span><span style="font-family: 仿宋;">3、4。</span></span></p>
+ <p class="27" style="line-height: 28pt; text-indent: -22.5pt; margin-left: 22.5pt; mso-line-height-rule: exactly; mso-char-indent-count: 0.0000; mso-list: l0 level1 lfo1;"><span style="font-family: 黑体; font-size: 16pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="mso-list: Ignore;">五、&nbsp;</span></span><span style="font-family: 黑体; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 黑体;">联系方式</span></span></p>
+ <p class="27" style="text-align: left; line-height: 28pt; text-indent: -36pt; margin-left: 68pt; mso-line-height-rule: exactly; mso-char-indent-count: 0.0000; mso-list: l1 level1 lfo2; mso-vsb_temp-align: none;"><span style="font-family: 楷体_GB2312; font-size: 16pt; mso-hansi-font-family: 仿宋; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="mso-list: Ignore;">(一)&nbsp;</span></span><span style="font-family: 楷体_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: 仿宋; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 楷体_GB2312;">校内联系方式</span></span></p>
+ <p class="MsoNormal" style="line-height: 125%; text-indent: 32pt; mso-char-indent-count: 2.0000;"><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">为方便北邮校内参赛选手顺利网上报名、提交作品及顺利参赛，请有意向参赛的学生团队负责人加入</span><span style="font-family: 仿宋;">“2026金融科技创新赛北邮交流群”，后续相关大赛通知都将在微信群发布。</span></span></p>
+ <p class="MsoNormal" style="text-align: left; line-height: 28pt; margin-left: 32pt; mso-line-height-rule: exactly; mso-vsb_temp-align: none;"><span style="font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">联系人：席老师</span></span></p>
+ <p class="27" style="text-align: left; line-height: 28pt; text-indent: 32pt; mso-line-height-rule: exactly; mso-vsb_temp-align: none;"><span style="font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">联系邮箱：</span></span><span style="font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">buptmbaxi@126.com</span></p>
+ <p class="MsoNormal" style="line-height: 125%; text-indent: 32pt; mso-char-indent-count: 2.0000;"><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">&nbsp;</span></p>
+ <p class="MsoNormal" style="text-align: center; line-height: 125%;"><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><br></span></p>
+ <p style="text-align: center;"><img width="250" src="/__local/0/F4/D9/3A6A0145683C600193090EFD9DD_71573197_102A6.png" vwidth="250" vheight="" vurl="/_vsl/0F4D93A6A0145683C600193090EFD9DD/71573197/102A6" vsbhref="vurl" orisrc="/__local/0/F4/D9/3A6A0145683C600193090EFD9DD_71573197_102A6.png" class="img_vsb_content"></p>
+ <p class="MsoNormal" style="text-align: center; line-height: 125%;"><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">&nbsp;</span></p>
+ <p class="MsoNormal" style="line-height: 125%; text-indent: 32pt; mso-char-indent-count: 2.0000;"><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">备注：如群二维码过期，可发邮件申请加群，最新群二维码会通过邮件发送，加群时请备注</span><span style="font-family: 仿宋;">“姓名+学院”）</span></span></p>
+ <p class="27" style="text-align: left; line-height: 28pt; text-indent: -36pt; margin-left: 68pt; mso-line-height-rule: exactly; mso-char-indent-count: 0.0000; mso-list: l1 level1 lfo2; mso-vsb_temp-align: none;"><span style="font-family: 楷体_GB2312; font-size: 16pt; mso-hansi-font-family: 仿宋; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="mso-list: Ignore;">(二)&nbsp;</span></span><span style="font-family: 楷体_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: 仿宋; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 楷体_GB2312;">组委会联系方式</span></span></p>
+ <p class="MsoNormal" style="text-align: left; line-height: 28pt; text-indent: 32pt; mso-line-height-rule: exactly; mso-char-indent-count: 2.0000; mso-vsb_temp-align: none;"><span style="font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">企业决策赛道报名咨询：崔振国，</span><span style="font-family: 仿宋;">13001099851</span></span></p>
+ <p class="MsoNormal" style="text-align: left; line-height: 28pt; text-indent: 32pt; mso-line-height-rule: exactly; mso-char-indent-count: 2.0000; mso-vsb_temp-align: none;"><span style="font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">商业分析与实践赛道报名咨询：王昊伦，</span><span style="font-family: 仿宋;">13121372789</span></span></p>
+ <p class="MsoNormal" style="text-align: left; line-height: 28pt; text-indent: 32pt; mso-line-height-rule: exactly; mso-char-indent-count: 2.0000; mso-vsb_temp-align: none;"><span style="font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">工商管理案例赛道报名咨询：郭瑞敏，</span><span style="font-family: 仿宋;">17616734995</span></span></p>
+ <p class="MsoNormal" style="text-align: left; line-height: 28pt; text-indent: 32pt; mso-line-height-rule: exactly; mso-char-indent-count: 2.0000; mso-vsb_temp-align: none;"><span style="font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">数字技术应用专项报名咨询：邵宇翔，</span><span style="font-family: 仿宋;">15026882748</span></span></p>
+ <p class="MsoNormal" style="text-align: left; line-height: 28pt; text-indent: 32pt; mso-line-height-rule: exactly; mso-char-indent-count: 2.0000; mso-vsb_temp-align: none;"><span style="font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">大赛组委会邮箱：</span><span style="font-family: 仿宋;">cpemic@163.com</span></span></p>
+ <p class="MsoNormal" style="text-align: left; line-height: 28pt; text-indent: 32pt; mso-line-height-rule: exactly; mso-char-indent-count: 2.0000; mso-vsb_temp-align: none;"><span style="font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">组委会秘书处：张一帅，</span><span style="font-family: 仿宋;">18611427167</span></span></p>
+ <p class="MsoNormal" style="text-align: left; line-height: 28pt; text-indent: 32pt; mso-line-height-rule: exactly; mso-char-indent-count: 2.0000; mso-vsb_temp-align: none;"><span style="font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">&nbsp;</span></p>
+ <p class="MsoNormal" style="text-align: left; line-height: 28pt; text-indent: 32pt; mso-line-height-rule: exactly; mso-char-indent-count: 2.0000; mso-vsb_temp-align: none;"><span style="font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">附件：</span><span style="font-family: 仿宋;">1</span></span><span style="font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">.</span><span style="font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">企业决策赛道规程及报名指南</span></span></p>
+ <p class="MsoNormal" style="text-align: left; line-height: 28pt; text-indent: 80pt; mso-line-height-rule: exactly; mso-char-indent-count: 5.0000; mso-vsb_temp-align: none;"><span style="font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">2.</span><span style="font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">商业分析与实践赛道规程及报名指南</span></span></p>
+ <p class="MsoNormal" style="text-align: left; line-height: 125%; text-indent: 80pt; margin-top: 7.8pt; mso-para-margin-top: 0.5000gd; mso-char-indent-count: 5.0000; mso-vsb_temp-align: none;"><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">3</span></span><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">.</span><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">工商管理案例赛道规程及报名指南</span></span></p>
+ <p class="MsoNormal" style="text-align: left; line-height: 125%; text-indent: 80pt; margin-top: 7.8pt; mso-para-margin-top: 0.5000gd; mso-char-indent-count: 5.0000; mso-vsb_temp-align: none;"><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">4</span></span><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">.</span><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">数字技术应用专项规程及报名指南</span></span></p>
+ <p class="MsoNormal" style="text-align: left; line-height: 125%; text-indent: 80pt; margin-top: 7.8pt; mso-para-margin-top: 0.5000gd; mso-char-indent-count: 5.0000; mso-vsb_temp-align: none;"><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">5</span></span><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">.</span><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">北京邮电大学研究生学科竞赛参赛信息表</span></span><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">-</span><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">2</span></span><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">026</span><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">中国研究生企业管理创新大赛</span></span></p>
+ <p class="MsoNormal" style="text-align: left; line-height: 28pt; text-indent: 32pt; mso-line-height-rule: exactly; mso-char-indent-count: 2.0000; mso-vsb_temp-align: none;"><span style="font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">&nbsp;<span style="font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></p>
+ <p class="MsoNormal" style="text-align: left; line-height: 28pt; text-indent: 32pt; mso-line-height-rule: exactly; mso-char-indent-count: 2.0000; mso-vsb_temp-align: none;"><span style="font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">&nbsp;</span></p>
+ <p class="MsoNormal" style="text-align: right; line-height: 28pt; text-indent: 32pt; mso-line-height-rule: exactly; mso-char-indent-count: 2.0000; mso-vsb_temp-align: none;"><span style="font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">教务部叶培大创新创业学院</span></span></p>
+ <p class="MsoNormal" style="text-align: right; line-height: 28pt; text-indent: 32pt; mso-line-height-rule: exactly; mso-char-indent-count: 2.0000; mso-vsb_temp-align: none;"><span style="font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">经济管理学院专业硕士中心</span></span></p>
+ <p class="MsoNormal" style="text-align: right; line-height: 28pt; text-indent: 32pt; mso-line-height-rule: exactly; mso-char-indent-count: 2.0000; mso-vsb_temp-align: none;"><span style="font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋;">2026年7月17日</span></span></p>
+ <p class="MsoNormal" style="text-align: left; line-height: 28pt; mso-line-height-rule: exactly; mso-vsb_temp-align: none;"><span style="font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">&nbsp;</span></p>
+ <p class="MsoNormal" style="text-align: center; line-height: 125%; margin-top: 7.8pt; mso-para-margin-top: 0.5000gd; mso-vsb_temp-align: none;"><span style="line-height: 125%; font-family: 仿宋; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">&nbsp;</span></p>
+</div>
+<!--EndFragment-->
+</div>
+    </div><div id="div_vote_id"></div>
+    <br>
+     <br>
+<p>
+    </p><ul style="list-style-type:none;"> 
+        <li>【<a href="/system/_content/download.jsp?urltype=news.DownloadAttachUrl&amp;owner=2101026164&amp;wbfileid=3237887" target="_blank" style="color: #333;">附件1：企业决策赛道规程及报名指南.pdf</a>】</li>
+        <li>【<a href="/system/_content/download.jsp?urltype=news.DownloadAttachUrl&amp;owner=2101026164&amp;wbfileid=3237888" target="_blank" style="color: #333;">附件2：商业分析与实践赛道规程及报名指南.pdf</a>】</li>
+        <li>【<a href="/system/_content/download.jsp?urltype=news.DownloadAttachUrl&amp;owner=2101026164&amp;wbfileid=3237889" target="_blank" style="color: #333;">附件3：工商管理案例赛道规程及报名指南.pdf</a>】</li>
+        <li>【<a href="/system/_content/download.jsp?urltype=news.DownloadAttachUrl&amp;owner=2101026164&amp;wbfileid=3237890" target="_blank" style="color: #333;">附件4：数字技术应用专项规程及报名指南.pdf</a>】</li>
+        <li>【<a href="/system/_content/download.jsp?urltype=news.DownloadAttachUrl&amp;owner=2101026164&amp;wbfileid=3237891" target="_blank" style="color: #333;">附件5：北京邮电大学研究生学科竞赛参赛信息表-2026中国研究生企业管理创新大赛.docx</a>】</li>
+    </ul>
+<p></p>
+    <p align="right" style="padding-top:50px">
+        <br>
+        下一条：<a href="xntz_content.jsp?urltype=news.NewsContentUrl&amp;wbtreeid=2153&amp;wbnewsid=138767">【竞赛通知】关于报名参加2026年第八届全球校园人工智能算法精英大赛的通知</a>
+    </p>
+</div>]]></description>
+    <pubDate>Sun, 19 Jul 2026 16:25:11 GMT+08:00</pubDate>
+  </item>
+  <item>
+    <title><![CDATA[【竞赛通知】关于报名参加2026年第八届全球校园人工智能算法精英大赛的通知]]></title>
+    <link>https://mymob.bupt.edu.cn/xntz_content.jsp?urltype=news.NewsContentUrl&amp;wbtreeid=2153&amp;wbnewsid=138767</link>
+    <guid>https://mymob.bupt.edu.cn/xntz_content.jsp?urltype=news.NewsContentUrl&amp;wbtreeid=2153&amp;wbnewsid=138767</guid>
+    <description><![CDATA[<script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script>
+<div style="padding: 0 25px;">
+    <h1 align="center" style=";font-size: 16px;line-height: 40px;">【竞赛通知】关于报名参加2026年第八届全球校园人工智能算法精英大赛的通知</h1>
+    <div align="center" style="font-size: 10px;width:100%;float:left;padding-bottom: 15px;border-bottom: 1px solid #eee;">2026-07-17&nbsp;教务部&nbsp;点击：[<script>_showDynClicks("wbnews", 2101026164, 138767)</script><span id="dynclicks_wbnews_138767_986" name="dynclicks_wbnews_138767_986">99</span>] 
+</div>
+    <hr>
+    
+<script type="text/javascript" src="_m/js/jquery.qrcode.min.js"></script> <!--  20220119新增分享  生成微信二维码 -->
+
+  <style>
+    /*20220119新增分享*/
+   .qrid_zz {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      display: none;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      display: none;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .qrid_zz #qrid {
+      padding: 8px;
+      background: #fff;
+      border-radius: 5px;
+   }
+   /*分享*/
+</style>
+
+
+
+   <!-- 20220119新增分享 分享微信二维码 -->
+   
+
+       <!--20220119新增分享 分享js  s -->
+       <script>
+        console.log(document.location.href);//本页面地址，如localhost/html/index.html
+        function shareTo(stype) {
+            var ftit = '';
+            var flink = '';
+            var lk = '';
+            //获取文章标题
+            ftit = $('.detailtitle h3').text();//此处的class名应该根据自己本身页面的class来取
+            //获取网页中内容的第一张图片
+            flink = 'https://' + window.location.host + $('.detailcon p img').eq(0).attr('src');
+            if (typeof flink == 'undefined') {
+                flink = '';
+            }
+            //当内容中没有图片时，设置分享图片为网站logo
+            if (flink == '') {
+                /**
+                 * 此处根据自己页面的样式以及布局进行改变处理
+                 *
+                 */
+                lk = 'https://' + window.location.host + 'images/logo.png';
+            }
+            //如果是上传的图片则进行绝对路径拼接
+            if (flink.indexOf('/uploads/') != -1) {
+                lk = 'http://' + window.location.host + flink;
+            }
+            //百度编辑器自带图片获取
+            if (flink.indexOf('ueditor') != -1) {
+                lk = flink;
+            }
+            /**
+             * 进行QQ分享测试时，本地的页面会分享报错，需要用部署地址，可用'http://www.baidu.com'来代替document.location.href，进行测试查看效果
+             */
+            //qq空间接口的传参
+            if (stype == 'qzone') {
+                window.open('https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + document.location.href + '?sharesource=qzone&title=' + ftit + '&pics=' + lk + '&summary=' + document.querySelector('meta[name="description"]').getAttribute('content'));
+            }
+            //新浪微博接口的传参
+            if (stype == 'sina') {
+                window.open('http://service.weibo.com/share/share.php?url=' + document.location.href + '?sharesource=weibo&title=' + ftit + '&pic=' + lk + '&appkey=2706825840');
+            }
+            //qq好友接口的传参
+            if (stype == 'qq') {
+                //获取meta标签的值，然后分享
+                window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + document.location.href + '?sharesource=qzone&title=' + ftit + '&pics=' + lk + '&summary=' + document.querySelector('meta[name="description"]').getAttribute('content') + '&desc= 清华经管会计系');
+            }
+            //生成二维码给微信扫描分享
+            if (stype == 'wechat') {
+    
+                //http://zixuephp.net/inc/qrcode_img.php是生成微信二维码的网址，后面的url跟我们自己的网址，然后他会以二维码的形式输出
+                var qrstr = document.location.href;
+                if ($('#qrid')[0].innerHTML == "") {
+                    $('#qrid').qrcode(qrstr);
+                }
+                $('.qrid_zz')[0].style.display = "flex";
+    
+            }
+        }
+        $(function () {
+            var result = window.matchMedia('(max-width: 817px)');
+    
+            if (result.matches) {
+                var fx_kg = 0
+                $('.nry_con_out .ushare li.share').click(function () {
+                    if (fx_kg == 0) {
+                        $('.nry_big .subchannel')[0].style.bottom = '70px';
+                        fx_kg = 1;
+                    } else {
+                        $('.nry_big .subchannel')[0].style.bottom = '0px';
+                        fx_kg = 0;
+                    }
+    
+                })
+            } else {
+                $('.nry_con_out .ushare li.share').mouseenter(function () {
+                    $('.my-share-d')[0].style.display = "block";
+                })
+                $('.my-share-d').mouseleave(function () {
+                    $('.my-share-d')[0].style.display = "none";
+                })
+            }
+    
+    
+        })
+    
+        $('.qrid_zz').click(function () {
+            $('.qrid_zz')[0].style.display = "none";
+        })
+    </script>
+    <div id="vsb_content" class="sjnr"><div class="v_news_content">
+<style>@font-face{ font-family:"Times New Roman";} @font-face{ font-family:"宋体";} @font-face{ font-family:"Wingdings";} @font-face{ font-family:"方正楷体_GBK";} @font-face{ font-family:"楷体";} @font-face{ font-family:"方正仿宋_GBK";} @font-face{ font-family:"方正小标宋简体";} @font-face{ font-family:"微软雅黑";} @font-face{ font-family:"Microsoft YaHei UI";} @font-face{ font-family:"仿宋_GB2312";} @font-face{ font-family:"黑体";} @font-face{ font-family:"楷体_GB2312";} @font-face{ font-family:"Calibri";} @list l0:level1{ mso-level-start-at:2; mso-level-number-format:decimal; mso-level-suffix:space; mso-level-text:"%1."; mso-level-tab-stop:none; mso-level-number-position:left; margin-left:0.0000pt; text-indent:0.0000pt; font-family:'Times New Roman';} p.MsoNormal{ mso-style-name:正文; mso-style-parent:""; margin:0pt; margin-bottom:.0001pt; text-indent:10.0000pt; mso-char-indent-count:2.0000; mso-pagination:none; text-align:justify; text-justify:inter-ideograph; font-family:'Times New Roman'; mso-fareast-font-family:宋体; font-size:10.5000pt; mso-font-kerning:1.0000pt;} h1{ mso-style-name:"标题 1"; mso-style-next:JSAI公文正文3号缩进; margin-top:5.0000pt; margin-bottom:5.0000pt; mso-margin-top-alt:auto; mso-margin-bottom-alt:auto; text-indent:0.0000pt; mso-char-indent-count:0.0000; mso-pagination:widow-orphan; text-align:left; mso-outline-level:1; font-family:宋体; font-weight:bold; font-size:24.0000pt; mso-font-kerning:18.0000pt;} h2{ mso-style-name:"标题 2"; mso-style-noshow:yes; mso-style-next:正文; margin:0pt; margin-bottom:.0001pt; text-indent:10.0000pt; mso-char-indent-count:2.0000; tab-stops:left blank 56.7000pt ; mso-pagination:none; text-align:justify; text-justify:inter-ideograph; mso-outline-level:2; font-family:'Times New Roman'; mso-fareast-font-family:方正楷体_GBK; mso-bidi-font-family:楷体; color:rgb(0,0,0); font-size:16.0000pt; mso-font-kerning:1.0000pt;} h3{ mso-style-name:"标题 3"; mso-style-noshow:yes; mso-style-next:JSAI公文正文3号缩进; margin:0pt; margin-bottom:.0001pt; text-indent:32.0000pt; mso-char-indent-count:2.0000; mso-outline-level:3; font-family:'Times New Roman'; mso-fareast-font-family:方正仿宋_GBK; mso-bidi-font-family:方正楷体_GBK; color:rgb(0,0,0); font-size:16.0000pt; mso-font-kerning:1.0000pt;} span.10{ font-family:'Times New Roman';} span.15{ font-family:宋体; font-weight:bold; font-size:24.0000pt; mso-font-kerning:18.0000pt;} span.16{ font-family:'Times New Roman'; mso-ansi-font-weight:bold;} span.17{ font-family:'Times New Roman'; color:rgb(149,79,114); text-decoration:underline; text-underline:single;} span.18{ font-family:'Times New Roman'; color:rgb(96,94,92); background:rgb(225,223,221); mso-shading:rgb(225,223,221);} span.19{ font-family:'Times New Roman'; color:rgb(5,99,193); text-decoration:underline; text-underline:single;} span.20{ font-family:'Times New Roman';} span.21{ font-family:'Times New Roman';} span.22{ font-family:宋体; font-size:15.0000pt;} p.23{ mso-style-name:JSAI公文正文3号缩进; margin:0pt; margin-bottom:.0001pt; text-indent:29.7000pt; mso-char-indent-count:2.0000; mso-pagination:none; text-align:justify; text-justify:inter-ideograph; font-family:'Times New Roman'; mso-fareast-font-family:宋体; color:rgb(0,0,0); font-size:10.5000pt; mso-font-kerning:1.0000pt;} p.MsoBodyText{ mso-style-name:正文文本; margin-top:12.0000pt; margin-left:34.4000pt; text-indent:0.0000pt; mso-char-indent-count:0.0000; text-autospace:none; mso-pagination:none; text-align:left; font-family:宋体; font-size:15.0000pt;} p.p{ mso-style-name:"普通\(网站\)"; mso-style-noshow:yes; margin-top:5.0000pt; margin-bottom:5.0000pt; mso-margin-top-alt:auto; mso-margin-bottom-alt:auto; text-indent:0.0000pt; mso-char-indent-count:0.0000; mso-pagination:widow-orphan; text-align:left; font-family:宋体; font-size:12.0000pt;} p.26{ mso-style-name:"Table Paragraph"; margin:0pt; margin-bottom:.0001pt; text-indent:0.0000pt; mso-char-indent-count:0.0000; text-autospace:none; mso-pagination:none; text-align:left; font-family:宋体; font-size:11.0000pt;} span.msoIns{ mso-style-type:export-only; mso-style-name:""; text-decoration:underline; text-underline:single; color:blue;} span.msoDel{ mso-style-type:export-only; mso-style-name:""; text-decoration:line-through; color:red;} table.MsoNormalTable{ mso-style-name:普通表格; mso-style-parent:""; mso-style-noshow:yes; mso-tstyle-rowband-size:0; mso-tstyle-colband-size:0; mso-padding-alt:0.0000pt 5.4000pt 0.0000pt 5.4000pt; mso-para-margin:0pt; mso-para-margin-bottom:.0001pt; mso-pagination:widow-orphan; font-family:'Times New Roman'; font-size:10.0000pt; mso-ansi-language:#0400; mso-fareast-language:#0400; mso-bidi-language:#0400;} @page{mso-page-border-surround-header:no; mso-page-border-surround-footer:no;}@page Section0{ margin-top:72.0000pt; margin-bottom:72.0000pt; margin-left:90.0000pt; margin-right:90.0000pt; size:595.3000pt 841.9000pt; vsb_temp:15.6000pt; mso-header-margin:42.5500pt; mso-footer-margin:49.6000pt;} div.Section0{page:Section0;}</style>
+<!--StartFragment-->
+<div class="Section0" style="vsb_temp: 15.6000pt;">
+ <p class="MsoNormal" style="text-align: center; text-indent: 0pt; margin-top: 15pt; margin-bottom: 15pt; mso-char-indent-count: 0.0000; mso-pagination: widow-orphan; mso-outline-level: 1;"><br></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">“全球校园人工智能算法精英大赛”位列全国普通高校学科竞赛排行榜，迄今已连续成功举办七届，覆盖全球1000余所高校，累计参赛人数超过10万人。大赛秉持“以赛促学、以赛促教、以赛促创”办赛理念，聚焦算法创新与应用创新，搭建算法竞技舞台，激发校园学子创新意识，托举青年科技人才成长。经大赛组委会研究，决定于2026年4月-12月期间举办第八届全球校园人工智能算法精英大赛。</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">第八届全球校园人工智能算法精英大赛北京市赛将由北京邮电大学、北京中关村学院联合承办。现将有关事项通知如下。</span></span></p>
+ <p class="MsoNormal" style="text-indent: 0pt; mso-char-indent-count: 0.0000;"><span style="font-family: 黑体; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 黑体;">一、赛事标识</span></span></p>
+ <p class="MsoNormal" style="text-indent: 32pt;"><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">中文名称：全球校园人工智能算法精英大赛</span></span></p>
+ <p class="MsoNormal" style="text-indent: 32pt;"><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">英文名称：</span><span style="font-family: 仿宋_GB2312;">Global Campus Artificial Intelligence Algorithm Elite Competition（AIC）</span></span></p>
+ <p class="MsoNormal" style="text-indent: 32pt;"><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">大赛口号：智青春</span><span style="font-family: 仿宋_GB2312;">·算未来（AI For Youth, AI For Future）</span></span></p>
+ <p class="MsoNormal" style="text-indent: 32pt;"><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">大赛网址：</span></span><a href="http://www.aicomp.cn"><span style="text-decoration: underline;"><span class="19" style="color: rgb(5, 99, 193); font-family: 仿宋_GB2312; font-size: 16pt; text-decoration: underline; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; text-underline: single;"><span style="font-family: 仿宋_GB2312;">www.aicomp.cn</span></span></span></a></p>
+ <p class="MsoNormal" style="text-indent: 0pt; mso-char-indent-count: 0.0000;"><span style="font-family: 黑体; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 黑体;">二、组织机构</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">1</span></span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">.</span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">全球校园人工智能算法精英大赛组织委员会（大赛组委会）是大赛最高决策机构，由来自全球学术界、产业界、创投界等领域知名专家组成。大赛设立专家委员会、评审（裁判）委员会、仲裁委员会、科技伦理审查委员会、监督委员会等赛事机构，另行公布。</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">2</span></span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">.</span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">经大赛组委会授权可设立赛区组委会。赛区组委会负责本赛区竞赛的组织实施、评审和晋级名单推荐等工作。</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">3</span></span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">.</span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">大赛组委会秘书处设在江苏省人工智能学会，负责竞赛组织、实施与执行。</span></span></p>
+ <p class="MsoNormal" style="text-indent: 0pt; mso-char-indent-count: 0.0000;"><span style="font-family: 黑体; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 黑体;">三、参赛对象</span></span></p>
+ <p class="MsoNormal" style="text-indent: 32pt; mso-pagination: widow-orphan;"><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">全球高校和科研院所拥有正式学籍的在读学生（含研究生、本科生、专科生）均可报名参赛。具体报名限制详见各赛道赛题竞赛规则。</span></span></p>
+ <p class="MsoNormal" style="text-indent: 0pt; mso-char-indent-count: 0.0000;"><span style="font-family: 黑体; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 黑体;">四、赛道和赛题设置</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">1</span></span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">.</span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">算法挑战赛本赛道以算法技术创新为核心，需要参赛团队根据赛题要求设计算法模型、编写代码、提交赛题结果或给出完整解决方案。赛题重点考察参赛选手运用算法解决实际问题的能力与水平，适合具备扎实算法功底、卓越工程实践能力与开放创新思维的选手参赛。</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">2</span></span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">.</span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">算法创新赛本赛道聚焦算法应用创新，鼓励参赛选手深挖算法潜力、拓展算法应用边界，围绕</span><span style="font-family: 仿宋_GB2312;">“人工智能+”科技、产业、消费、民生、治理等重点领域，遴选一批优秀“人工智能+”新成果、新产品、新应用、新场景，挖掘一批“人工智能+”和OPC创新创业项目。</span></span></p>
+ <p class="23" style="text-indent: 32pt;"><span style="color: rgb(0, 0, 0); font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">涵盖赛题：（</span><span style="font-family: 仿宋_GB2312;">1）算法模型创新（2）AI</span></span><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">+软件创新（3）AI+</span></span><span style="color: rgb(0, 0, 0); font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">硬件</span></span><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">创新（</span><span style="font-family: 仿宋_GB2312;">4）AI+</span></span><span style="color: rgb(0, 0, 0); font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">场景</span></span><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">创新（</span><span style="font-family: 仿宋_GB2312;">5）AI+学科交叉（6）AI+创新创业（7）AI+OPC创新创业。</span></span></p>
+ <p class="23" style="text-indent: 32pt;"><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">3</span></span><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">.</span><span style="color: rgb(0, 0, 0); font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">算法应用赛本赛道设置多场景算法任务赛题，全面考察参赛选手的算法创新、编程实现、临场应变与团队协作能力。根据赛题任务不同，赛题分为竞技类、任务类、对抗类等类别。</span></span></p>
+ <p class="23" style="text-indent: 32pt;"><span style="color: rgb(0, 0, 0); font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">涵盖赛题：</span></span><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">（</span><span style="font-family: 仿宋_GB2312;">1）视觉逻辑算法应用赛（2）安世腾多模态·智慧空间创意赛（3）双</span></span><span style="color: rgb(0, 0, 0); font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">臂机器人分拣与应用挑战赛</span></span><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">（</span><span style="font-family: 仿宋_GB2312;">4）</span></span><span style="color: rgb(0, 0, 0); font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">慧巡智贴</span></span><span style="color: rgb(0, 0, 0); font-family: 微软雅黑; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 微软雅黑;">・</span></span><span style="color: rgb(0, 0, 0); font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">违停治理机器人挑战赛</span></span><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">（</span><span style="font-family: 仿宋_GB2312;">5）穿越火线（6）机</span></span><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">制</span></span><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">专家（</span><span style="font-family: 仿宋_GB2312;">7）紧急救援（8）巧夺天工（9）大模型技术创新赛（10）大模型任务挑战赛（11）智慧城市无人驾驶算法应用赛（12）脑机与应急机器人算法应用赛（13）无人机配送航程挑战赛（14）智慧养老护理</span></span><span style="color: rgb(0, 0, 0); font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">（</span><span style="font-family: 仿宋_GB2312;">15）</span></span><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: 方正仿宋_GBK; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">具身智能巡检</span></span><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">（</span><span style="font-family: 仿宋_GB2312;">16）水中机器人巡检任务挑战赛（17）水下机器人打捞任务对抗赛等</span></span><span style="color: rgb(0, 0, 0); font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">。</span></span></p>
+ <p class="23" style="text-indent: 32pt;"><span style="color: rgb(0, 0, 0); font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">4.</span><span style="color: rgb(0, 0, 0); font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">算法主题赛本赛道聚焦人工智能</span><span style="font-family: 仿宋_GB2312;">+学科交叉和细分场景应用，鼓励参赛团队综合运用人工智能算法技术与跨学科知识，围绕特定学科专业、特定行业和应用场景等方向，提出新思路、发现新路径、设计新产品、创意新应用、拓展新场景等。</span></span></p>
+ <p class="23" style="text-indent: 32pt;"><span style="color: rgb(0, 0, 0); font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">5</span></span><span style="color: rgb(0, 0, 0); font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">.</span><span style="color: rgb(0, 0, 0); font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">产业命题赛本赛道由知名企业、重点实验室等单位出题，围绕实际需求和前沿研究课题开展关键技术攻关。</span></span></p>
+ <p class="23" style="text-indent: 32pt;"><span style="color: rgb(0, 0, 0); font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">6.</span><span style="color: rgb(0, 0, 0); font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">算法专项赛本赛道为面向特定专业领域（大模型、智能体、智能博弈、机器视觉、</span><span style="font-family: 仿宋_GB2312;">AIGC、OpenClaw、机器人、无人机、自动驾驶/无人车、灵巧手、具身智能、类脑智能、脑机接口等）或特定对象（职教生、中小学生、教师、公众及企事业单位职工等）的单项竞赛，竞赛通知单独发布。</span></span></p>
+ <p class="MsoNormal" style="text-indent: 0pt; mso-char-indent-count: 0.0000;"><span style="font-family: 黑体; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 黑体;">五、比赛赛制</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">大赛主要采用</span><span style="font-family: 仿宋_GB2312;">“赛区制”和“赛马制”两种赛制。</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">1.</span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">“赛区制”赛制采用“校赛-省赛-总决赛”三级赛制。参赛团队以队长所在高校确定赛区归属。未设立省级赛区或某赛区参赛团队数量过少不能成赛，参赛团队则进入区域赛由国赛组委会统一组织。区域赛等同省级赛事。总决赛由国赛组委会统一组织。</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">“算法创新赛、算法应用赛”采用赛区制，我校归属北京赛区。校赛由学校自行组织，并于2026年10月10日前完成。北京赛区组委会负责组织北京市赛。原则上市级一、二等奖推荐参加国赛，推荐比例不超过40%。北京市赛已举办的比赛项目，必须通过北京市赛推荐至国赛；若参赛团队数量过少不能成赛，则该赛题的参赛队参加由国赛组委会统一组织的区域赛。北京市赛（区域赛）一、二等奖获奖作品推荐参加全国总决赛。全国总决赛详见具体通知。</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">2</span></span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">.</span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">“赛马制”赛制采用“初赛-复赛-总决赛”三级赛制，由国赛组委会统一组织。复赛等同省级赛事。</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">算法挑战赛、算法主题赛、产业命题赛、算法专项赛，具体比赛赛制详见官网通知。</span></span></p>
+ <p class="MsoNormal" style="text-indent: 0pt; mso-char-indent-count: 0.0000;"><span style="font-family: 黑体; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 黑体;">六、参赛要求</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">1. 参赛选手可单人创建队伍参赛，也可与本校（不含分校）其他选手组队参赛，</span></span><span style="color: rgb(192, 0, 0); line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">每支团队成员上限</span><span style="font-family: 仿宋_GB2312;">3名</span></span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">（</span></span><span style="color: rgb(192, 0, 0); line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">跨校组队无效</span></span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">）。</span></span><span style="color: rgb(192, 0, 0); line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">每支团队最多可设置</span><span style="font-family: 仿宋_GB2312;">2名指导教师</span></span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">。报名时间截止后，参赛团队成员及指导教师信息均不得修改。</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">2. 每支团队设置1名队长。有关赛事通知，组委会将通过邮件或短信等形式通知队长。队长应在赛事期间注意查看邮件和手机短信，以免延误参赛。</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">3. 每个参赛团队可报名参加多个赛题。同一赛题，每位选手只能加入一支团队参赛。</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">4. 参赛作品应为参赛团队在本届大赛期间内创作的原创作品。若发现作品存在抄袭、雷同、弄虚作假、版权不清晰等问题，直接取消参赛团队比赛资格及奖项。</span></span></p>
+ <p class="MsoNormal" style="text-indent: 0pt; mso-char-indent-count: 0.0000;"><span style="font-family: 黑体; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 黑体;">七、奖项设置</span></span></p>
+ <p class="MsoNormal" style="text-indent: 32pt;"><span style="font-family: 楷体_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 楷体_GB2312;">（一）参赛团队奖</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">1. 省级奖项设置。省赛（区域赛/复赛）分别设立一、二、三等奖。以晋级省赛（区域赛/复赛）参赛有效作品数量为基数，获奖作品数量分别按照不超过15%、25%、30%的比例取整计算（若某赛题作品数量少于10个，可由评委根据作品成绩确定获奖名单）。</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">注：算法应用赛道中同一赛题总决赛一等奖获奖团队中来自同一高校（不含分校）的数量不超过</span><span style="font-family: 仿宋_GB2312;">2支（含2支）。</span></span></p>
+ <p class="MsoNormal" style="text-indent: 32pt;"><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">2. 总决赛设奖规则</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">总决赛设一、二、三等奖。各赛道赛题设奖比例及约束条件详见各赛道赛题竞赛通知。</span></span></p>
+ <p class="MsoNormal" style="text-indent: 32pt;"><span style="font-family: 楷体_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 楷体_GB2312;">（二）优秀指导教师奖</span></span></p>
+ <p class="MsoNormal" style="text-indent: 32pt;"><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">给予省赛（复赛）一等奖获奖团队的指导教师颁发省赛优秀指导教师奖，给予总决赛一等奖获奖团队的指导教师颁发总决赛优秀指导教师奖。</span></span></p>
+ <p class="MsoNormal" style="text-indent: 32pt;"><span style="font-family: 楷体_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 楷体_GB2312;">（三）其他奖项</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">大赛设立优秀赛区奖、优秀组织单位奖、优秀合作伙伴奖、优秀赛题奖、优秀志愿者等奖项，用于表彰在大赛组织工作中表现突出的单位和个人。具体评奖规则另行制定。</span></span></p>
+ <p class="MsoNormal" style="text-indent: 0pt; mso-char-indent-count: 0.0000;"><span style="font-family: 黑体; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 黑体;">八、赛程安排</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">1</span></span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">.</span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">参赛报名</span><span style="font-family: 仿宋_GB2312;">2026年4月28日起，大赛官网（www.aicomp.cn）开放报名。各赛道赛题报名开始和截止时间以具体通知为准。</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">2</span></span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">.</span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">校赛（初赛）校赛由学校自行组织。采用</span><span style="font-family: 仿宋_GB2312;">“赛马制”的赛题初赛时间以赛道赛题通知为准。</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">3</span></span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">.</span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">省赛（复赛）赛区制：省赛报名截止时间为</span><span style="font-family: 仿宋_GB2312;">2026年10月15日20:00，省赛具体时间由各赛区组委会决定，但最迟应在11月1日之前完成。赛马制：复赛报名截止时间和复赛时间以赛道赛题竞赛规则为准。</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">4</span></span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">.</span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">总决赛计划于</span><span style="font-family: 仿宋_GB2312;">11月中下旬举办（时间地点另行通知）。部分赛道赛题总决赛时间可以提前或延后。若延后，原则上应于2026年12月31日前完成。</span></span></p>
+ <p class="MsoNormal" style="text-indent: 0pt; mso-char-indent-count: 0.0000;"><span style="font-family: 黑体; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 黑体;">九、参赛报名</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">1.参赛团队可登录大赛报名系统（www.aicomp.cn）提交报名信息参与比赛；</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">2</span></span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">.</span></span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">校赛不收取参赛费。入围</span></span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">省赛</span></span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">的参赛团队</span></span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">，</span></span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">由</span></span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">江苏省人工智能学会代收</span></span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">，按照</span></span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">500</span></span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">元</span><span style="font-family: 仿宋_GB2312;">/赛题/团队的标准收取参赛费。参赛费仅用于补贴后续比赛的赛事组织、比赛场地、专家评审等相关支出。比赛期间参赛团队指导教师和参赛选手食宿交通等费用自行负责</span></span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">；</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">3.</span></span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">参赛队长或指导</span></span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">教</span></span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">师通过报名系统完成线上支付、比赛结束后统一在报名系统中申请并下载电子发票。线下缴费请在官网查看缴费流程。</span></span></p>
+ <p class="MsoNormal" style="text-indent: 0pt; mso-char-indent-count: 0.0000;"><span style="font-family: 黑体; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 黑体;">十、其他</span></span></p>
+ <p class="23" style="text-indent: 32pt;"><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">1.校赛选拔赛比赛环节、评审方式等由各校、各地自行决定</span></span><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">；</span></span></p>
+ <p class="23" style="text-indent: 32pt;"><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">2.发生争议时，由大赛赛区仲裁委员会介入调查</span></span><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">；</span></span></p>
+ <p class="23" style="text-indent: 32pt;"><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">3.未尽事宜，通过大赛官网、公众号及QQ群及时获取相关信息；</span></span></p>
+ <p class="23" style="text-indent: 32pt;"><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">4.大赛最终解释权归大赛组委会所有。</span></span></p>
+ <p class="MsoNormal" style="text-indent: 0pt; mso-char-indent-count: 0.0000;"><span style="font-family: 黑体; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 黑体;">十一、联系方式</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">国赛组委会地址：南京大学鼓楼校区费彝民楼</span><span style="font-family: 仿宋_GB2312;">B1013室</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">咨询及投诉邮箱：</span><span style="font-family: 仿宋_GB2312;">office@aicomp.cn</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">大赛网址：</span><span style="font-family: 仿宋_GB2312;">www.aicomp.cn</span></span></p>
+ <p class="MsoNormal" style="text-indent: 32pt;"><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">北京赛区</span></span><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">组委会联系人：</span></span><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">望老师，</span><span style="font-family: 仿宋_GB2312;">18515155866</span></span></p>
+ <p class="MsoNormal" style="text-indent: 32pt;"><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: 仿宋_GB2312;">田老师，</span><span style="font-family: 仿宋_GB2312;">15611835582</span></span></p>
+ <p class="MsoNormal" style="text-indent: 32pt;"><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">北京赛区</span></span><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">联系</span></span><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">邮箱：</span><span style="font-family: 仿宋_GB2312;">3684986382@qq.com</span></span></p>
+ <p class="MsoNormal" style="text-indent: 32pt;"><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">北京赛区</span><span style="font-family: 仿宋_GB2312;">QQ群：1097588709</span></span></p>
+ <p class="MsoNormal" style="text-indent: 0pt; mso-char-indent-count: 0.0000;"><span style="font-family: 黑体; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 黑体;">十二、北京邮电大学校赛报名说明</span></span></p>
+ <p class="MsoNormal" style="text-indent: 32pt;"><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">北京邮电大学校赛联系人：望老师，</span><span style="font-family: 仿宋_GB2312;">18515155866</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: 仿宋_GB2312;">刘老师，</span><span style="font-family: 仿宋_GB2312;">13366776167</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="color: rgb(192, 0, 0); line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">校赛报名邮箱：</span></span><a href="mailto:3684986382@qq.com"><span style="text-decoration: underline;"><span class="19" style="color: rgb(192, 0, 0); line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; text-decoration: underline; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; text-underline: single;"><span style="font-family: 仿宋_GB2312;">3684986382@qq.com</span></span></span></a></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="color: rgb(192, 0, 0); line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">北邮校赛</span><span style="font-family: 仿宋_GB2312;">QQ群：981110518</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">请所有计划参加</span><span style="font-family: 仿宋_GB2312;">2026年第八届全球校园人工智能大赛的参赛同学扫码进入北邮校赛QQ群，并发送报名信息表（此通知附件3）</span></span><a href="mailto:至邮箱3684986382@qq.com"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">至</span></span><span style="color: rgb(192, 0, 0); line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">校赛报名邮箱</span></span><span style="text-decoration: underline;"><span class="19" style="color: rgb(192, 0, 0); line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; text-decoration: underline; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; text-underline: single;"><span style="font-family: 仿宋_GB2312;">3684986382@qq.com</span></span></span></a><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">。（报名信息表提交截止时间（暂定）：</span><span style="font-family: 仿宋_GB2312;">2026年9月15日）。</span></span></p>
+ <p class="MsoNormal" style="text-indent: 0pt; mso-char-indent-count: 0.0000;"><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">&nbsp;</span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 32pt;"><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: 黑体; mso-bidi-font-family: 黑体; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">附</span></span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">件：</span><span style="font-family: 仿宋_GB2312;">1. 关于举办第八届全球校园人工智能算法精英大赛的通知</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 80pt; mso-char-indent-count: 5.0000; mso-list: l0 level1 lfo1;"><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="mso-list: Ignore;">2.&nbsp;</span></span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">AIC算法大赛参赛指南</span></span></p>
+ <p class="MsoNormal" style="line-height: 150%; text-indent: 80pt; mso-char-indent-count: 5.0000; mso-list: l0 level1 lfo1;"><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="mso-list: Ignore;">3.&nbsp;</span></span><span style="line-height: 150%; font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 仿宋_GB2312;">AIC2026北京邮电大学校赛报名表.xlsx</span></span></p>
+ <p class="MsoNormal" style="text-indent: 0pt; mso-char-indent-count: 0.0000;"><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">&nbsp;</span></p>
+ <p class="MsoNormal" style="text-align: right; line-height: 22.5pt; text-indent: 32pt; -ms-word-break: break-all; mso-pagination: widow-orphan;"><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: 仿宋_GB2312;">教务部</span></span><span style="color: rgb(51, 51, 51); font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: 宋体; mso-font-kerning: 0.0000pt;"><span style="font-family: 仿宋_GB2312;">叶培大创新创业学院</span></span></p>
+ <p class="MsoNormal" style="text-align: right; line-height: 22.5pt; text-indent: 32pt; -ms-word-break: break-all; mso-pagination: widow-orphan;"><span style="color: rgb(51, 51, 51); font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: 宋体; mso-font-kerning: 0.0000pt;"><span style="font-family: 仿宋_GB2312;">人工智能学院</span></span></p>
+ <p class="MsoNormal" style="text-align: right; line-height: 22.5pt; text-indent: 32pt; -ms-word-break: break-all; mso-pagination: widow-orphan;"><span style="color: rgb(51, 51, 51); font-family: Calibri; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-fareast-font-family: 仿宋_GB2312;">&nbsp;</span><span style="color: rgb(51, 51, 51); font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: 宋体; mso-font-kerning: 0.0000pt;">&nbsp;</span><span style="color: rgb(51, 51, 51); font-family: Calibri; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-fareast-font-family: 仿宋_GB2312;">&nbsp;</span><span style="color: rgb(51, 51, 51); font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: 宋体; mso-font-kerning: 0.0000pt;">&nbsp;</span><span style="color: rgb(51, 51, 51); font-family: Calibri; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-fareast-font-family: 仿宋_GB2312;">&nbsp;</span><span style="color: rgb(51, 51, 51); font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: 宋体; mso-font-kerning: 0.0000pt;">&nbsp;</span><span style="color: rgb(51, 51, 51); font-family: Calibri; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-fareast-font-family: 仿宋_GB2312;">&nbsp;</span><span style="color: rgb(51, 51, 51); font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: 宋体; mso-font-kerning: 0.0000pt;">&nbsp;</span><span style="color: rgb(51, 51, 51); font-family: Calibri; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-fareast-font-family: 仿宋_GB2312;">&nbsp;</span><span style="color: rgb(51, 51, 51); font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: 宋体; mso-font-kerning: 0.0000pt;">&nbsp;</span><span style="color: rgb(51, 51, 51); font-family: Calibri; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-fareast-font-family: 仿宋_GB2312;">&nbsp;</span><span style="color: rgb(51, 51, 51); font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: 宋体; mso-font-kerning: 0.0000pt;">&nbsp;</span><span style="color: rgb(51, 51, 51); font-family: Calibri; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-fareast-font-family: 仿宋_GB2312;">&nbsp;</span><span style="color: rgb(51, 51, 51); font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: 宋体; mso-font-kerning: 0.0000pt;">&nbsp;</span><span style="color: rgb(51, 51, 51); font-family: Calibri; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-fareast-font-family: 仿宋_GB2312;">&nbsp;</span><span style="color: rgb(51, 51, 51); font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: 宋体; mso-font-kerning: 0.0000pt;">&nbsp;</span><span style="color: rgb(51, 51, 51); font-family: Calibri; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-fareast-font-family: 仿宋_GB2312;">&nbsp;</span><span style="color: rgb(51, 51, 51); font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: 宋体; mso-font-kerning: 0.0000pt;">&nbsp;</span><span style="color: rgb(51, 51, 51); font-family: Calibri; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-fareast-font-family: 仿宋_GB2312;">&nbsp;</span><span style="color: rgb(51, 51, 51); font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: 宋体; mso-font-kerning: 0.0000pt;">&nbsp;</span><span style="color: rgb(51, 51, 51); font-family: Calibri; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-fareast-font-family: 仿宋_GB2312;">&nbsp;</span><span style="color: rgb(51, 51, 51); font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-bidi-font-family: 宋体; mso-font-kerning: 0.0000pt;"><span style="font-family: 仿宋_GB2312;">2026年7月17日</span></span></p>
+ <p class="MsoNormal" style="text-align: center; text-indent: 0pt; mso-char-indent-count: 0.0000;"><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">&nbsp;</span></p>
+ <p class="MsoNormal" style="text-indent: 32pt;"><span style="font-family: 仿宋_GB2312; font-size: 16pt; mso-spacerun: &quot;yes&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0000pt;">&nbsp;</span></p>
+</div>
+<!--EndFragment-->
+</div>
+    </div><div id="div_vote_id"></div>
+    <br>
+     <br>
+<p>
+    </p><ul style="list-style-type:none;"> 
+        <li>【<a href="/system/_content/download.jsp?urltype=news.DownloadAttachUrl&amp;owner=2101026164&amp;wbfileid=3237882" target="_blank" style="color: #333;">附件1-关于举办第八届全球校园人工智能算法精英大赛的通知.pdf</a>】</li>
+        <li>【<a href="/system/_content/download.jsp?urltype=news.DownloadAttachUrl&amp;owner=2101026164&amp;wbfileid=3237883" target="_blank" style="color: #333;">附件2-2026AIC算法大赛参赛指南-含选手与教师.pdf</a>】</li>
+        <li>【<a href="/system/_content/download.jsp?urltype=news.DownloadAttachUrl&amp;owner=2101026164&amp;wbfileid=3237884" target="_blank" style="color: #333;">附件3-AIC2026北京邮电大学校赛报名表.xls</a>】</li>
+    </ul>
+<p></p>
+    <p align="right" style="padding-top:50px">
+        上一条：<a href="xntz_content.jsp?urltype=news.NewsContentUrl&amp;wbtreeid=2153&amp;wbnewsid=138768">【竞赛通知】关于第四届（2026）中国研究生企业管理创新大赛报名的通知</a><br>
+        下一条：<a href="xntz_content.jsp?urltype=news.NewsContentUrl&amp;wbtreeid=2153&amp;wbnewsid=138753">关于公布2026年研究生课程建设项目立项结果的通知</a>
+    </p>
+</div>]]></description>
+    <pubDate>Sun, 19 Jul 2026 16:25:11 GMT+08:00</pubDate>
+  </item>
+  <item>
+    <title><![CDATA[关于开展“多彩青春，成功就业”2026年暑期促就业专项行动的通知]]></title>
+    <link>https://mymob.bupt.edu.cn/xntz_content.jsp?urltype=news.NewsContentUrl&amp;wbtreeid=1162&amp;wbnewsid=138757</link>
+    <guid>https://mymob.bupt.edu.cn/xntz_content.jsp?urltype=news.NewsContentUrl&amp;wbtreeid=1162&amp;wbnewsid=138757</guid>
+    <description><![CDATA[<script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script>
+<div style="padding: 0 25px;">
+    <h1 align="center" style=";font-size: 16px;line-height: 40px;">关于开展“多彩青春，成功就业”2026年暑期促就业专项行动的通知</h1>
+    <div align="center" style="font-size: 10px;width:100%;float:left;padding-bottom: 15px;border-bottom: 1px solid #eee;">2026-07-17&nbsp;学生工作部（学生处、武装部）&nbsp;点击：[<script>_showDynClicks("wbnews", 2101026164, 138757)</script><span id="dynclicks_wbnews_138757_466" name="dynclicks_wbnews_138757_466">67</span>] 
+</div>
+    <hr>
+    
+<script type="text/javascript" src="_m/js/jquery.qrcode.min.js"></script> <!--  20220119新增分享  生成微信二维码 -->
+
+  <style>
+    /*20220119新增分享*/
+   .qrid_zz {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      display: none;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      display: none;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .qrid_zz #qrid {
+      padding: 8px;
+      background: #fff;
+      border-radius: 5px;
+   }
+   /*分享*/
+</style>
+
+
+
+   <!-- 20220119新增分享 分享微信二维码 -->
+   
+
+       <!--20220119新增分享 分享js  s -->
+       <script>
+        console.log(document.location.href);//本页面地址，如localhost/html/index.html
+        function shareTo(stype) {
+            var ftit = '';
+            var flink = '';
+            var lk = '';
+            //获取文章标题
+            ftit = $('.detailtitle h3').text();//此处的class名应该根据自己本身页面的class来取
+            //获取网页中内容的第一张图片
+            flink = 'https://' + window.location.host + $('.detailcon p img').eq(0).attr('src');
+            if (typeof flink == 'undefined') {
+                flink = '';
+            }
+            //当内容中没有图片时，设置分享图片为网站logo
+            if (flink == '') {
+                /**
+                 * 此处根据自己页面的样式以及布局进行改变处理
+                 *
+                 */
+                lk = 'https://' + window.location.host + 'images/logo.png';
+            }
+            //如果是上传的图片则进行绝对路径拼接
+            if (flink.indexOf('/uploads/') != -1) {
+                lk = 'http://' + window.location.host + flink;
+            }
+            //百度编辑器自带图片获取
+            if (flink.indexOf('ueditor') != -1) {
+                lk = flink;
+            }
+            /**
+             * 进行QQ分享测试时，本地的页面会分享报错，需要用部署地址，可用'http://www.baidu.com'来代替document.location.href，进行测试查看效果
+             */
+            //qq空间接口的传参
+            if (stype == 'qzone') {
+                window.open('https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + document.location.href + '?sharesource=qzone&title=' + ftit + '&pics=' + lk + '&summary=' + document.querySelector('meta[name="description"]').getAttribute('content'));
+            }
+            //新浪微博接口的传参
+            if (stype == 'sina') {
+                window.open('http://service.weibo.com/share/share.php?url=' + document.location.href + '?sharesource=weibo&title=' + ftit + '&pic=' + lk + '&appkey=2706825840');
+            }
+            //qq好友接口的传参
+            if (stype == 'qq') {
+                //获取meta标签的值，然后分享
+                window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + document.location.href + '?sharesource=qzone&title=' + ftit + '&pics=' + lk + '&summary=' + document.querySelector('meta[name="description"]').getAttribute('content') + '&desc= 清华经管会计系');
+            }
+            //生成二维码给微信扫描分享
+            if (stype == 'wechat') {
+    
+                //http://zixuephp.net/inc/qrcode_img.php是生成微信二维码的网址，后面的url跟我们自己的网址，然后他会以二维码的形式输出
+                var qrstr = document.location.href;
+                if ($('#qrid')[0].innerHTML == "") {
+                    $('#qrid').qrcode(qrstr);
+                }
+                $('.qrid_zz')[0].style.display = "flex";
+    
+            }
+        }
+        $(function () {
+            var result = window.matchMedia('(max-width: 817px)');
+    
+            if (result.matches) {
+                var fx_kg = 0
+                $('.nry_con_out .ushare li.share').click(function () {
+                    if (fx_kg == 0) {
+                        $('.nry_big .subchannel')[0].style.bottom = '70px';
+                        fx_kg = 1;
+                    } else {
+                        $('.nry_big .subchannel')[0].style.bottom = '0px';
+                        fx_kg = 0;
+                    }
+    
+                })
+            } else {
+                $('.nry_con_out .ushare li.share').mouseenter(function () {
+                    $('.my-share-d')[0].style.display = "block";
+                })
+                $('.my-share-d').mouseleave(function () {
+                    $('.my-share-d')[0].style.display = "none";
+                })
+            }
+    
+    
+        })
+    
+        $('.qrid_zz').click(function () {
+            $('.qrid_zz')[0].style.display = "none";
+        })
+    </script>
+    <div id="vsb_content" class="sjnr"><div class="v_news_content">
+<p style="line-height:150%"><span style="font-size:21px;line-height:150%;font-family:仿宋_gb2312;color:windowtext">各学院：</span></p>
+<p style="text-align:justify;text-justify:inter-ideograph;text-indent:43px;line-height:150%"><span style="font-size:21px;line-height:150%;font-family:仿宋_gb2312;color:windowtext">为深入贯彻党中央、国务院和市委、市政府关于高校毕业生就业工作的决策部署，推动落实《北京市教育委员会关于做好2026届普通高校毕业生就业创业工作的通知》(京教学〔2025〕8号)相关任务，抢抓就业“百日冲刺”的最后关键期，确保就业服务离校“不断线”,帮助更多有就业意愿的毕业生在离校前后尽早落实毕业去向，现开展“多彩青春，成功就业”2026年暑期促就业专项行动。有关事项通知如下。</span></p>
+<p style="text-align:justify;text-justify:inter-ideograph;text-indent:43px;line-height:150%;text-autospace:ideograph-numeric ideograph-other;vertical-align:auto"><span style="font-size:21px;line-height:150%;font-family:黑体">一、活动主题</span></p>
+<p style="text-indent:43px;line-height:150%"><span style="font-size:21px;line-height:150%;font-family: 仿宋_gb2312;color:windowtext">多彩青春，成功就业</span></p>
+<p style="text-align:justify;text-justify:inter-ideograph;text-indent:43px;line-height:150%;text-autospace:ideograph-numeric ideograph-other;vertical-align:auto"><span style="font-size:21px;line-height:150%;font-family:黑体">二、活动时间</span></p>
+<p style="text-indent:43px;line-height:150%"><span style="font-size:21px;line-height:150%;font-family:仿宋_gb2312;color:windowtext">2026</span><span style="font-size:21px;line-height:150%;font-family:仿宋_gb2312;color:windowtext">年7月至8月</span></p>
+<p style="text-align:justify;text-justify:inter-ideograph;text-indent:43px;line-height:150%;text-autospace:ideograph-numeric ideograph-other;vertical-align:auto"><span style="font-size:21px;line-height:150%;font-family:黑体">三、参与对象</span></p>
+<p style="text-indent:43px;line-height:150%"><span style="font-size:21px;line-height:150%;font-family: 仿宋_gb2312;color:windowtext">2026届毕业生</span></p>
+<p style="text-align:justify;text-justify:inter-ideograph;text-indent:43px;line-height:150%;text-autospace:ideograph-numeric ideograph-other;vertical-align:auto"><span style="font-size:21px;line-height:150%;font-family:黑体">四、活动内容</span></p>
+<p style="text-align:justify;text-justify:inter-ideograph;text-indent:43px;line-height:150%;text-autospace:ideograph-numeric ideograph-other;vertical-align:auto"><span style="font-size:21px;line-height:150%;font-family:楷体_gb2312;letter-spacing:1px">(</span><span style="font-size:21px;line-height:150%;font-family:楷体_gb2312;letter-spacing:1px">一)全面摸排就业底数，</span><span style="font-size:21px;line-height: 150%;font-family:楷体_gb2312;letter-spacing:1px">细化工作台账。</span><span style="font-size:21px;line-height:150%;font-family:仿宋_gb2312;color:windowtext">各学院要对离校未就业毕业生情况进行全面摸排，进一步细化工作台账，跟进帮扶措施、就业进展等。安排研究生导师、班主任、辅导员等常态化与离校未就业毕业生保持联系，持续跟踪就业进度。对有就业意愿的毕业生要做好岗位推荐、就业指导等服务；对暂无就业意愿的毕业生，要定期回访、持续跟进引导。</span></p>
+<p style="text-align:justify;text-justify:inter-ideograph;text-indent:43px;line-height:150%;text-autospace:ideograph-numeric ideograph-other;vertical-align:auto"><span style="font-size:21px;line-height:150%;font-family:楷体_gb2312;letter-spacing:1px">(</span><span style="font-size:21px;line-height:150%;font-family:楷体_gb2312;letter-spacing:1px">二)加力挖掘优质岗位，拓宽就业渠道。</span><span style="font-size:21px;line-height:150%;font-family:仿宋_gb2312;color:windowtext">持续深化“访企拓岗促就业”专项行动，去向落实率低于全校平均水平的学院要精准发力，提升走访实效和岗位转化利用率。主动对接校友企业、产学研合作企业、吸纳过本校毕业生的企业等，持续扩容市场化就业岗位。积极宣传推介“三支一扶”、乡村振兴协理员、社区工作者等国家和北京市基层服务项目，引导毕业生踊跃报考；统筹开发科研助理、管理助理等校内过渡性岗位，丰富就业选择。动员毕业生关注“国家大学生就业服务平台”“成功就业”“北邮就业创业”公众号等，主动参与线上线下各类招聘活动。暑假期间部分市校两级毕业生就业双选会场次详见附件。</span></p>
+<p style="text-align:justify;text-justify:inter-ideograph;text-indent:50px;line-height:150%"><span style="font-size:21px;line-height:150%;font-family:楷体_gb2312;letter-spacing:2px">(</span><span style="font-size:21px;line-height: 150%;font-family:楷体_gb2312;letter-spacing:2px">三)持续做好教育引导，凝聚家校合力。</span><span style="font-size:21px;line-height:150%;font-family:仿宋_gb2312;color:windowtext">各学院要结合暑期工作安排，调动各方力量形成全员促就业工作合力，统筹学院领导、研究生导师、班主任、辅导员队伍，依托线上线下多元沟通渠道，面向未就业毕业生常态化开展就业观念教育。做好就业创业先进典型宣传，引导毕业生理性客观评估综合条件、专业特长，结合市场就业需求树立务实择业观，主动出击、积极求职。持续深化家校联动机制，常态化与毕业生家长沟通对接，充分争取家长认同与配合，共同助力毕业生尽早落实就业去向。</span></p>
+<p style="text-align:justify;text-justify:inter-ideograph;text-indent:50px;line-height:150%"><span style="font-size:21px;line-height:150%;font-family:楷体_gb2312;letter-spacing:2px">(</span><span style="font-size:21px;line-height: 150%;font-family:楷体_gb2312;letter-spacing:2px">四)</span><span style="font-size:21px;line-height:150%;font-family:楷体_gb2312;letter-spacing:0">精准开展困难帮扶，兜牢民生底线。</span><span style="font-size:21px;line-height:150%;font-family:仿宋_gb2312;color:windowtext">各学院要重点关注脱贫家庭、低保家庭、零就业家庭、残疾等困难毕业生群体，建立“一人一档、一人一策”精准帮扶台账。未落实毕业去向的困难生，每两周更新求职意向和帮扶措施。</span></p>
+<p style="text-align:justify;text-justify:inter-ideograph;text-indent:50px;line-height:150%"><span style="font-size:21px;line-height:150%;font-family:楷体_gb2312;letter-spacing:2px">(</span><span style="font-size:21px;line-height: 150%;font-family:楷体_gb2312;letter-spacing:2px">五)规范登记毕业去向，加强数据管理</span><span style="font-size:21px;line-height:150%;font-family:楷体_gb2312;letter-spacing: 2px">。</span><span style="font-size:21px;line-height:150%;font-family:仿宋_gb2312;color:windowtext">各学院要认真落实毕业去向登记制度，严格按照有关标准审核毕业生就业材料和去向信息。规范做好就业监测数据核查，严格落实“灵活就业”界定标准，坚决杜绝“盖章即认定就业”等数据造假、注水行为。加强就业数据管理，未经学校同意严禁对外发布过程性数据、严禁向商业机构提供或交换数据、严禁违规调取使用数据。</span></p>
+<p style="text-align:justify;text-justify:inter-ideograph;text-indent:53px;line-height:150%"><span style="font-size:21px;line-height:150%;font-family:楷体_gb2312;letter-spacing:3px">(</span><span style="font-size:21px;line-height: 150%;font-family:楷体_gb2312;letter-spacing:3px">六)切实加强安全教育，保障学生权益。</span><span style="font-size:21px;line-height:150%;font-family:仿宋_gb2312;color:windowtext">各学院要常态化开展毕业生就业安全教育和诚信教育，帮助毕业生防范滥用试用期、招聘虚假信息等常见就业风险，切实增强毕业生风险防范和诚信履约意识。在暑期就业见习中，要提醒学生警惕“付费实习”“实习生套娃”“保录取”等陷阱，通过官方渠道寻找就业见习机会，避免个人财产损失。教育引导毕业生一旦遭遇诈骗侵害，及时留存相关证据，第一时间向有关部门报案或举报，维护自身合法权益。</span></p>
+<p style="text-indent:43px;line-height:150%"><span style="font-size:21px;line-height:150%;font-family: 黑体">五、工作要求</span></p>
+<p style="text-align:justify;text-justify:inter-ideograph;text-indent:43px;line-height:150%;text-autospace:ideograph-numeric ideograph-other;vertical-align:auto"><span style="font-size:21px;line-height:150%;font-family:楷体_gb2312;letter-spacing:3px">(</span><span style="font-size:21px;line-height:150%;font-family:楷体_gb2312;letter-spacing:3px">一)强化主体责任。</span><span style="font-size:21px;line-height: 150%;font-family:仿宋_gb2312;color:windowtext">各学院要深刻认识高校毕业生就业工作的极端重要性，切实提高政治站位，强化底线思维，全力促进毕业生尽早就业。严格落实就业“一把手”工程，各学院要定期向学院党委汇报就业工作进展情况，确保各项工作有序推进。</span></p>
+<p style="text-align:justify;text-justify:inter-ideograph;text-indent:43px;line-height:150%;text-autospace:ideograph-numeric ideograph-other;vertical-align:auto"><span style="font-size:21px;line-height:150%;font-family:楷体_gb2312;letter-spacing:2px">(</span><span style="font-size:21px;line-height:150%;font-family:楷体_gb2312;letter-spacing:2px">二)确保数据真实。</span><span style="font-size:21px;line-height: 150%;font-family:仿宋_gb2312;color:windowtext">要严格落实教育部就业工作“四不准”“三不得”要求，加强就业数据自查，提高就业监测工作质量。对灵活就业、其他录用形式等严格核查，强化真实性核验。</span></p>
+<p style="text-indent:43px;line-height:150%"><br></p>
+<p style="margin-right:43px;text-align:right;text-indent:43px;line-height:150%"><span style="font-size:21px;line-height:150%;font-family:仿宋_gb2312;color:windowtext">学生工作部</span></p>
+<p style="text-align:right;text-indent:43px;line-height:150%"><span style="font-size:21px;line-height:150%;font-family:仿宋_gb2312;color:windowtext">就业与创业指导中心</span></p>
+<p style="margin-right:21px;text-align:right;text-indent:43px;line-height:150%"><span style="font-size:21px;line-height:150%;font-family:仿宋_gb2312;color:windowtext">2026</span><span style="font-size:21px;line-height:150%;font-family:仿宋_gb2312;color:windowtext">年7月17日</span></p>
+<p><br></p>
+</div>
+    </div><div id="div_vote_id"></div>
+    <br>
+     <br>
+<p>
+    </p><ul style="list-style-type:none;"> 
+        <li>【<a href="/system/_content/download.jsp?urltype=news.DownloadAttachUrl&amp;owner=2101026164&amp;wbfileid=3237836" target="_blank" style="color: #333;">附件：暑假期间部分市校两级毕业生就业双选会场次.docx</a>】</li>
+    </ul>
+<p></p>
+    <p align="right" style="padding-top:50px">
+        <br>
+        下一条：<a href="xntz_content.jsp?urltype=news.NewsContentUrl&amp;wbtreeid=1162&amp;wbnewsid=138742">关于开展首批北京邮电大学二级学院就业指导工作室申报工作的通知</a>
+    </p>
+</div>]]></description>
+    <pubDate>Sun, 19 Jul 2026 16:25:11 GMT+08:00</pubDate>
+  </item>
+  <item>
+    <title><![CDATA[关于公布北京邮电大学未来学院2026年“未来学者计划”项目立项结果的通知]]></title>
+    <link>https://mymob.bupt.edu.cn/xntz_content.jsp?urltype=news.NewsContentUrl&amp;wbtreeid=2031&amp;wbnewsid=138781</link>
+    <guid>https://mymob.bupt.edu.cn/xntz_content.jsp?urltype=news.NewsContentUrl&amp;wbtreeid=2031&amp;wbnewsid=138781</guid>
+    <description><![CDATA[<script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script>
+<div style="padding: 0 25px;">
+    <h1 align="center" style=";font-size: 16px;line-height: 40px;">关于公布北京邮电大学未来学院2026年“未来学者计划”项目立项结果的通知</h1>
+    <div align="center" style="font-size: 10px;width:100%;float:left;padding-bottom: 15px;border-bottom: 1px solid #eee;">2026-07-17&nbsp;未来学院&nbsp;点击：[<script>_showDynClicks("wbnews", 2101026164, 138781)</script><span id="dynclicks_wbnews_138781_767" name="dynclicks_wbnews_138781_767">40</span>] 
+</div>
+    <hr>
+    
+<script type="text/javascript" src="_m/js/jquery.qrcode.min.js"></script> <!--  20220119新增分享  生成微信二维码 -->
+
+  <style>
+    /*20220119新增分享*/
+   .qrid_zz {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      display: none;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      display: none;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .qrid_zz #qrid {
+      padding: 8px;
+      background: #fff;
+      border-radius: 5px;
+   }
+   /*分享*/
+</style>
+
+
+
+   <!-- 20220119新增分享 分享微信二维码 -->
+   
+
+       <!--20220119新增分享 分享js  s -->
+       <script>
+        console.log(document.location.href);//本页面地址，如localhost/html/index.html
+        function shareTo(stype) {
+            var ftit = '';
+            var flink = '';
+            var lk = '';
+            //获取文章标题
+            ftit = $('.detailtitle h3').text();//此处的class名应该根据自己本身页面的class来取
+            //获取网页中内容的第一张图片
+            flink = 'https://' + window.location.host + $('.detailcon p img').eq(0).attr('src');
+            if (typeof flink == 'undefined') {
+                flink = '';
+            }
+            //当内容中没有图片时，设置分享图片为网站logo
+            if (flink == '') {
+                /**
+                 * 此处根据自己页面的样式以及布局进行改变处理
+                 *
+                 */
+                lk = 'https://' + window.location.host + 'images/logo.png';
+            }
+            //如果是上传的图片则进行绝对路径拼接
+            if (flink.indexOf('/uploads/') != -1) {
+                lk = 'http://' + window.location.host + flink;
+            }
+            //百度编辑器自带图片获取
+            if (flink.indexOf('ueditor') != -1) {
+                lk = flink;
+            }
+            /**
+             * 进行QQ分享测试时，本地的页面会分享报错，需要用部署地址，可用'http://www.baidu.com'来代替document.location.href，进行测试查看效果
+             */
+            //qq空间接口的传参
+            if (stype == 'qzone') {
+                window.open('https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + document.location.href + '?sharesource=qzone&title=' + ftit + '&pics=' + lk + '&summary=' + document.querySelector('meta[name="description"]').getAttribute('content'));
+            }
+            //新浪微博接口的传参
+            if (stype == 'sina') {
+                window.open('http://service.weibo.com/share/share.php?url=' + document.location.href + '?sharesource=weibo&title=' + ftit + '&pic=' + lk + '&appkey=2706825840');
+            }
+            //qq好友接口的传参
+            if (stype == 'qq') {
+                //获取meta标签的值，然后分享
+                window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + document.location.href + '?sharesource=qzone&title=' + ftit + '&pics=' + lk + '&summary=' + document.querySelector('meta[name="description"]').getAttribute('content') + '&desc= 清华经管会计系');
+            }
+            //生成二维码给微信扫描分享
+            if (stype == 'wechat') {
+    
+                //http://zixuephp.net/inc/qrcode_img.php是生成微信二维码的网址，后面的url跟我们自己的网址，然后他会以二维码的形式输出
+                var qrstr = document.location.href;
+                if ($('#qrid')[0].innerHTML == "") {
+                    $('#qrid').qrcode(qrstr);
+                }
+                $('.qrid_zz')[0].style.display = "flex";
+    
+            }
+        }
+        $(function () {
+            var result = window.matchMedia('(max-width: 817px)');
+    
+            if (result.matches) {
+                var fx_kg = 0
+                $('.nry_con_out .ushare li.share').click(function () {
+                    if (fx_kg == 0) {
+                        $('.nry_big .subchannel')[0].style.bottom = '70px';
+                        fx_kg = 1;
+                    } else {
+                        $('.nry_big .subchannel')[0].style.bottom = '0px';
+                        fx_kg = 0;
+                    }
+    
+                })
+            } else {
+                $('.nry_con_out .ushare li.share').mouseenter(function () {
+                    $('.my-share-d')[0].style.display = "block";
+                })
+                $('.my-share-d').mouseleave(function () {
+                    $('.my-share-d')[0].style.display = "none";
+                })
+            }
+    
+    
+        })
+    
+        $('.qrid_zz').click(function () {
+            $('.qrid_zz')[0].style.display = "none";
+        })
+    </script>
+    <div id="vsb_content" class="sjnr"><div class="v_news_content">
+<p style="text-align:justify;text-justify:inter-ideograph;text-indent:43px;background:white"><span style="font-size:21px;font-family:仿宋_gb2312;color:#333333;background:white">为深入贯彻《北京邮电大学卓越拔尖人才培养实施方案（试行）》，未来学院设立“未来学者计划”。该项目以培养科技前沿的优秀青年学术人才为目标，旨在依托学校广阔的学术平台与丰富的科研资源，为本科生提供早期基础科研支持，引导学生发挥跨学科知识能力，深度参与科研探索活动，激发前沿交叉思维，提升科研创新能力，推动拔尖人才培养。</span></p>
+<p style="text-align:justify;text-justify:inter-ideograph;text-indent:43px;background:white"><span style="font-size:21px;font-family:仿宋_gb2312;color:#333333;background:white">2026</span><span style="font-size:21px;font-family:仿宋_gb2312;color:#333333;background:white">年“未来学者计划”申报工作于4月28日正式启动。在导师的悉心指导下，学生们完成了从深入探讨、精准选题、明确方向到严谨撰写的全过程。申报项目紧密围绕新一代信息通信技术、关键基础软件、集成电路、网络空间安全以及人工智能等国家关键核心技术领域。经未来学院组织的项目初筛、匿名函评及立项答辩等多轮严格评审，最终确定立项“未来学者计划”10项、“未来学者培育计划”8项。具体立项名单详见下表。</span></p>
+<p style="text-align: center"><img src="/__local/2/57/C9/EF3AC2B2125282CA917B4D6BF73_0C762D54_4D9E5.png" width="974" vsbhref="vurl" vurl="/_vsl/257C9EF3AC2B2125282CA917B4D6BF73/0C762D54/4D9E5" vheight="" vwidth="974" orisrc="/__local/2/57/C9/EF3AC2B2125282CA917B4D6BF73_0C762D54_4D9E5.png" class="img_vsb_content"></p>
+<p><span style="background-color: white; color: rgb(51, 51, 51); font-family: 仿宋_gb2312; font-size: 21px; text-align: justify; text-indent: 43px;">&nbsp; &nbsp; “未来学者计划”旨在构建多维度、跨学科研究环境，激发本科生科研内生动力，为培养高水平创新型科研人才奠定基础。后续，学院将持续跟踪项目团队的学术成长与项目进展，依托学术研讨、专业培训等形式搭建交流平台，全力保障项目高质量实施。</span></p>
+<p style="text-align:justify;text-justify:inter-ideograph;text-indent:43px;background:white"><span style="font-size: 21px;font-family:仿宋_gb2312;color:#333333;background:white">希望各指导教师及项目组同学严格遵照相关管理规定，精心谋划、稳步推进项目开展，切实保障项目落地见效，全面提升“未来学者计划”的整体建设质量与育人成效。</span></p>
+<p style="text-align:justify;text-justify:inter-ideograph;text-indent:43px;background:white"><span style="font-size: 21px;font-family:仿宋_gb2312;color:#333333;background:white"><br></span></p>
+<p style="text-align: right; text-indent: 43px; background: white;"><span style="font-size: 21px;font-family:仿宋_gb2312;color:#333333;background:white">未来学院</span></p>
+<p style="text-align: right; text-indent: 43px; background: white;"><span style="font-size: 21px;font-family:仿宋_gb2312;color:#333333;background:white">2026年7月17日</span></p>
+<p><br></p>
+</div>
+    </div><div id="div_vote_id"></div>
+    <br>
+     <br>
+    <p align="right" style="padding-top:50px">
+        <br>
+        下一条：<a href="xntz_content.jsp?urltype=news.NewsContentUrl&amp;wbtreeid=2031&amp;wbnewsid=136551">关于未来学院2026年科研导师增选的通知</a>
+    </p>
+</div>]]></description>
+    <pubDate>Sun, 19 Jul 2026 16:25:11 GMT+08:00</pubDate>
+  </item>
+  <item>
+    <title><![CDATA[数字媒体与设计艺术学院关于2025级本科生秋季学期校内转专业的通知]]></title>
+    <link>https://mymob.bupt.edu.cn/xntz_content.jsp?urltype=news.NewsContentUrl&amp;wbtreeid=1215&amp;wbnewsid=138751</link>
+    <guid>https://mymob.bupt.edu.cn/xntz_content.jsp?urltype=news.NewsContentUrl&amp;wbtreeid=1215&amp;wbnewsid=138751</guid>
+    <description><![CDATA[<script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script>
+<div style="padding: 0 25px;">
+    <h1 align="center" style=";font-size: 16px;line-height: 40px;">数字媒体与设计艺术学院关于2025级本科生秋季学期校内转专业的通知</h1>
+    <div align="center" style="font-size: 10px;width:100%;float:left;padding-bottom: 15px;border-bottom: 1px solid #eee;">2026-07-17&nbsp;数字媒体与设计艺术学院&nbsp;点击：[<script>_showDynClicks("wbnews", 2101026164, 138751)</script><span id="dynclicks_wbnews_138751_295" name="dynclicks_wbnews_138751_295">45</span>] 
+</div>
+    <hr>
+    
+<script type="text/javascript" src="_m/js/jquery.qrcode.min.js"></script> <!--  20220119新增分享  生成微信二维码 -->
+
+  <style>
+    /*20220119新增分享*/
+   .qrid_zz {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      display: none;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      display: none;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .qrid_zz #qrid {
+      padding: 8px;
+      background: #fff;
+      border-radius: 5px;
+   }
+   /*分享*/
+</style>
+
+
+
+   <!-- 20220119新增分享 分享微信二维码 -->
+   
+
+       <!--20220119新增分享 分享js  s -->
+       <script>
+        console.log(document.location.href);//本页面地址，如localhost/html/index.html
+        function shareTo(stype) {
+            var ftit = '';
+            var flink = '';
+            var lk = '';
+            //获取文章标题
+            ftit = $('.detailtitle h3').text();//此处的class名应该根据自己本身页面的class来取
+            //获取网页中内容的第一张图片
+            flink = 'https://' + window.location.host + $('.detailcon p img').eq(0).attr('src');
+            if (typeof flink == 'undefined') {
+                flink = '';
+            }
+            //当内容中没有图片时，设置分享图片为网站logo
+            if (flink == '') {
+                /**
+                 * 此处根据自己页面的样式以及布局进行改变处理
+                 *
+                 */
+                lk = 'https://' + window.location.host + 'images/logo.png';
+            }
+            //如果是上传的图片则进行绝对路径拼接
+            if (flink.indexOf('/uploads/') != -1) {
+                lk = 'http://' + window.location.host + flink;
+            }
+            //百度编辑器自带图片获取
+            if (flink.indexOf('ueditor') != -1) {
+                lk = flink;
+            }
+            /**
+             * 进行QQ分享测试时，本地的页面会分享报错，需要用部署地址，可用'http://www.baidu.com'来代替document.location.href，进行测试查看效果
+             */
+            //qq空间接口的传参
+            if (stype == 'qzone') {
+                window.open('https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + document.location.href + '?sharesource=qzone&title=' + ftit + '&pics=' + lk + '&summary=' + document.querySelector('meta[name="description"]').getAttribute('content'));
+            }
+            //新浪微博接口的传参
+            if (stype == 'sina') {
+                window.open('http://service.weibo.com/share/share.php?url=' + document.location.href + '?sharesource=weibo&title=' + ftit + '&pic=' + lk + '&appkey=2706825840');
+            }
+            //qq好友接口的传参
+            if (stype == 'qq') {
+                //获取meta标签的值，然后分享
+                window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + document.location.href + '?sharesource=qzone&title=' + ftit + '&pics=' + lk + '&summary=' + document.querySelector('meta[name="description"]').getAttribute('content') + '&desc= 清华经管会计系');
+            }
+            //生成二维码给微信扫描分享
+            if (stype == 'wechat') {
+    
+                //http://zixuephp.net/inc/qrcode_img.php是生成微信二维码的网址，后面的url跟我们自己的网址，然后他会以二维码的形式输出
+                var qrstr = document.location.href;
+                if ($('#qrid')[0].innerHTML == "") {
+                    $('#qrid').qrcode(qrstr);
+                }
+                $('.qrid_zz')[0].style.display = "flex";
+    
+            }
+        }
+        $(function () {
+            var result = window.matchMedia('(max-width: 817px)');
+    
+            if (result.matches) {
+                var fx_kg = 0
+                $('.nry_con_out .ushare li.share').click(function () {
+                    if (fx_kg == 0) {
+                        $('.nry_big .subchannel')[0].style.bottom = '70px';
+                        fx_kg = 1;
+                    } else {
+                        $('.nry_big .subchannel')[0].style.bottom = '0px';
+                        fx_kg = 0;
+                    }
+    
+                })
+            } else {
+                $('.nry_con_out .ushare li.share').mouseenter(function () {
+                    $('.my-share-d')[0].style.display = "block";
+                })
+                $('.my-share-d').mouseleave(function () {
+                    $('.my-share-d')[0].style.display = "none";
+                })
+            }
+    
+    
+        })
+    
+        $('.qrid_zz').click(function () {
+            $('.qrid_zz')[0].style.display = "none";
+        })
+    </script>
+    <div id="vsb_content" class="sjnr"><div class="v_news_content">
+<p style="margin-bottom:0;text-indent:32px;text-align:justify;text-justify:inter-ideograph;line-height:150%"><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">根据《北京邮电大学本科生校内转专业办法》（校发［</span>2024<span style="font-family:仿宋">］</span><span style="font-family:Times New Roman">1</span><span style="font-family:仿宋">号）精神，按照学校教务处的统一部署，现启动数字媒体与设计艺术学院</span><span style="font-family:Times New Roman">2025</span><span style="font-family:仿宋">级本科生秋季学期校内转专业工作。</span></span></p>
+<p style="margin-bottom:0;text-indent:32px;text-align:justify;text-justify:inter-ideograph;line-height:150%"><strong><span style="font-size: 18px;"><span style="font-family: 仿宋;">一、接收学生资格及条件</span></span></strong></p>
+<p style="margin-bottom:0;text-indent:32px;text-align:justify;text-justify:inter-ideograph;line-height:150%"><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">申请转专业学生须符合《北京邮电大学本科生校内转专业办法》中第三章所述条件。</span></span></p>
+<p style="margin-bottom:0;text-indent:32px;text-align:justify;text-justify:inter-ideograph;line-height:150%"><strong><span style="font-size: 18px;"><span style="font-family: 仿宋;">二、</span><span style="font-family: 仿宋;">转专业工作安排</span></span></strong></p>
+<p style="margin-right:0;margin-bottom:0;margin-left:0;text-indent:32px;text-autospace:ideograph-numeric;text-align:justify;text-justify:inter-ideograph;line-height:150%"><span style="font-family:'times new roman';font-size:16px"><span style="font-family: &quot;times new roman&quot;; font-size: 16px; text-align: justify; text-indent: 32px; text-wrap: wrap;">1.</span>2026<span style="font-family:仿宋">年</span><span style="font-family:Times New Roman">7</span><span style="font-family:仿宋">月</span><span style="font-family:Times New Roman">17</span><span style="font-family:仿宋">日</span><span style="font-family:Times New Roman">15</span><span style="font-family:仿宋">时至</span><span style="font-family:Times New Roman">9</span><span style="font-family:仿宋">月</span><span style="font-family:Times New Roman">8</span><span style="font-family:仿宋">日</span><span style="font-family:Times New Roman">17</span><span style="font-family:仿宋">时，学生登陆本科教务系统</span><span style="font-family:Times New Roman">http://jwgl.bupt.edu.cn/jsxsd</span><span style="font-family:仿宋">（浏览器建议使用极速模式），报名申请转入一个专业或专业大类，请务必按照附件中转专业操作手册进行，请慎重填写申请。</span></span></p>
+<p style="margin-right:0;margin-bottom:0;margin-left:0;text-indent:32px;text-autospace:ideograph-numeric;text-align:justify;text-justify:inter-ideograph;line-height:150%"><span style="font-family:'times new roman';font-size:16px"><span style="font-family: &quot;times new roman&quot;; font-size: 16px; text-align: justify; text-indent: 32px; text-wrap: wrap;">2.</span>2026<span style="font-family:仿宋">年</span></span><span style="font-family:'times new roman';font-size:16px">9</span><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">月</span></span><span style="font-family:'times new roman';font-size:16px">8</span><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">日</span>17<span style="font-family:仿宋">时前，</span></span><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">请提交转专业申请的同学加入</span></span><span style="font-family:'times new roman';font-size:16px"><span style="font-family:Times New Roman">“</span><span style="font-family:仿宋">数媒</span><span style="font-family:Times New Roman">26</span><span style="font-family:仿宋">年</span></span><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">秋</span></span><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">季转专业通知群</span><span style="font-family:Times New Roman">”QQ</span><span style="font-family:仿宋">群（群号：</span><span style="font-family:Times New Roman">877292809</span><span style="font-family:仿宋">）并将群内名称改为</span><span style="font-family:Times New Roman">“</span><span style="font-family:仿宋">姓名</span><span style="font-family:Times New Roman">-</span><span style="font-family:仿宋">学号</span><span style="font-family:Times New Roman">-</span><span style="font-family:仿宋">原专业</span><span style="font-family:Times New Roman">”</span><span style="font-family:仿宋">。</span></span></p>
+<p style="margin-right:0;margin-bottom:0;margin-left:0;text-indent:32px;text-autospace:ideograph-numeric;text-align:justify;text-justify:inter-ideograph;line-height:150%"><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋"><span style="text-align: justify; text-indent: 32px; text-wrap: wrap; font-family: &quot;times new roman&quot;; font-size: 16px;">3.</span>申请转入数媒学院的学生需提交</span></span><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">第一学年</span></span><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">可信成绩单（下载途径</span></span><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">：</span></span><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">教务系统</span>-<span style="font-family:仿宋">可信证明</span><span style="font-family:Times New Roman">-</span><span style="font-family:仿宋">可信成绩单中文，文件命名为</span></span><span style="font-family:'times new roman';font-size:16px">“</span><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">申请转入专业</span>+<span style="font-family:仿宋">学号</span><span style="font-family:Times New Roman">+</span><span style="font-family:仿宋">姓名</span></span><span style="font-family:'times new roman';font-size:16px">”</span><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">）</span></span><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">；</span></span><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">申请转入数字媒体艺术专业的学生需提交《北京邮电大学本科转专业申请表（申请转入数字媒体艺术专业）》（见附件）</span>PDF<span style="font-family:仿宋">电子版。提交邮箱</span></span><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">：</span></span><span style="font-family:'times new roman';font-size:16px">shumeijiaowuke@163.com<span style="font-family:仿宋">，逾期未提交视为自动放弃申请转入数媒学院资格。</span></span></p>
+<p style="margin-bottom:0;text-indent:32px;text-align:justify;text-justify:inter-ideograph;line-height:150%"><strong><span style="font-size: 18px;"><span style="font-family: 仿宋;">三、考核方式及内容</span></span></strong></p>
+<p style="margin-bottom:0;text-indent:32px;text-align:justify;text-justify:inter-ideograph;line-height:150%"><span style="font-family:'times new roman';font-size:16px">1.2026<span style="font-family:仿宋">年</span><span style="font-family:Times New Roman">9</span><span style="font-family:仿宋">月</span><span style="font-family:Times New Roman">8</span><span style="font-family:仿宋">日至</span><span style="font-family:Times New Roman">9</span><span style="font-family:仿宋">月</span><span style="font-family:Times New Roman">9</span><span style="font-family:仿宋">日，学院对申请转入数字媒体与设计艺术学院各专业的学生进行资格审查，通过资格审查的学生方可进入面试环节。</span></span></p>
+<p style="margin-bottom:0;text-indent:32px;text-align:justify;text-justify:inter-ideograph;line-height:150%"><span style="font-family:'times new roman';font-size:16px">2.2026<span style="font-family:仿宋">年</span><span style="font-family:Times New Roman">9</span><span style="font-family:仿宋">月</span><span style="font-family:Times New Roman">9</span><span style="font-family:仿宋">日至</span><span style="font-family:Times New Roman">9</span><span style="font-family:仿宋">月</span><span style="font-family:Times New Roman">16</span><span style="font-family:仿宋">日</span></span><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">，</span></span><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">学院将组织考核，</span></span><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">考核方式为综合面试。综合面试主要考核学生的综合素质。面试时间为</span>15<span style="font-family:仿宋">分钟，其中</span><span style="font-family:Times New Roman">5</span><span style="font-family:仿宋">分钟为学生自我介绍。</span></span></p>
+<p style="margin-bottom:0;text-indent:32px;text-align:justify;text-justify:inter-ideograph;line-height:150%"><span style="font-family:'times new roman';font-size:16px">3.</span><span style="font-family:'times new roman';font-size:16px">2026<span style="font-family:仿宋">年</span></span><span style="font-family:'times new roman';font-size:16px">9</span><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">月</span>1</span><span style="font-family:'times new roman';font-size:16px">7</span><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">日</span></span><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">前我院</span></span><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">将</span></span><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">确定拟接收名单</span></span><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">并报送教务处，教务处审核名单后对转专业学生名单进行校级公示</span></span><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">。</span></span></p>
+<p style="margin-bottom:0;text-indent:32px;text-align:justify;text-justify:inter-ideograph;line-height:150%"><strong><span style="font-size: 18px;"><span style="font-family: 仿宋;">四</span><span style="font-family: 仿宋;">、其他</span></span></strong></p>
+<p style="text-indent:32px;line-height:150%"><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋"><span style="font-family: &quot;times new roman&quot;; font-size: 16px; text-align: justify; text-indent: 32px; text-wrap: wrap;">1.</span>获准转专业的学生如放弃转专业资格，须在校级公示结束前向转入学院书面提出，由转入学院报教务处备案。校级公示结束后，获准转专业的学生不得放弃转专业资格。</span></span></p>
+<p style="text-indent:32px;line-height:150%"><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋"><span style="font-family: &quot;times new roman&quot;; font-size: 16px; text-align: justify; text-indent: 32px; text-wrap: wrap;">2.</span>跨学科门类转专业的学生，由学院确定转入同一年级或低一年级。</span></span></p>
+<p style="text-indent:32px;line-height:150%"><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋"><span style="text-align: justify; text-indent: 32px; text-wrap: wrap; font-family: &quot;times new roman&quot;; font-size: 16px;">3.</span>课程调整请关注学校后续发布的相关通知，转专业学生须修完转入专业培养方案所规定的所有教学环节方能毕业。上述未尽事宜遵照</span></span><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">《北京邮电大学本科生校内转专业办法》</span></span><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">执行。</span></span></p>
+<p style="margin-bottom:0;text-indent:32px;text-align:justify;text-justify:inter-ideograph;line-height:150%"><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">咨询电话：</span>66605669 <span style="font-family:仿宋">林老师</span></span></p>
+<p style="margin-bottom:0;text-indent:32px;text-align:justify;text-justify:inter-ideograph;line-height:150%"><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋"><br></span></span></p>
+<p style="margin-bottom:0;text-align:right;line-height:150%"><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">数字媒体与设计艺术学院</span></span></p>
+<p style="margin-bottom:0;text-align:right;line-height:150%"><span style="font-family:'times new roman';font-size:16px">2026<span style="font-family:仿宋">年</span></span><span style="font-family:'times new roman';font-size:16px">7</span><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">月</span></span><span style="font-family:'times new roman';font-size:16px">17</span><span style="font-family:'times new roman';font-size:16px"><span style="font-family:仿宋">日</span></span></p>
+<p><br></p>
+</div>
+    </div><div id="div_vote_id"></div>
+    <br>
+     <br>
+<p>
+    </p><ul style="list-style-type:none;"> 
+        <li>【<a href="/system/_content/download.jsp?urltype=news.DownloadAttachUrl&amp;owner=2101026164&amp;wbfileid=3237814" target="_blank" style="color: #333;">附件1：学生转专业操作说明.doc</a>】</li>
+        <li>【<a href="/system/_content/download.jsp?urltype=news.DownloadAttachUrl&amp;owner=2101026164&amp;wbfileid=3237815" target="_blank" style="color: #333;">附件2：北京邮电大学本科转专业申请表（申请转入数字媒体艺术专业）.docx</a>】</li>
+    </ul>
+<p></p>
+    <p align="right" style="padding-top:50px">
+        <br>
+        下一条：<a href="xntz_content.jsp?urltype=news.NewsContentUrl&amp;wbtreeid=1215&amp;wbnewsid=137509">关于开展“育见非遗”系列活动之“以丝为墨，以纸为绢”宣纸刺绣非遗体验活动的通知</a>
+    </p>
+</div>]]></description>
+    <pubDate>Sun, 19 Jul 2026 16:25:11 GMT+08:00</pubDate>
+  </item>
 </channel>
 </rss>
